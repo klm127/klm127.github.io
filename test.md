@@ -9,3 +9,11 @@ permalink: /test.html
 # larger
 
 dolem ipsum...
+
+#something about the blog today
+
+today i wrote in my blog....
+
+here is some code i made
+
+`code code code lalala`
