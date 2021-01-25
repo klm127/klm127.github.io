@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+#calculator-root {
+  color:white;
+  font-family: JetBrains Mono, Courier, monospace;
+  margin-bottom: 20px;
+}
+#calculator {
+  margin: auto;
+  width: 320px;
+}
+#display-container {
+  background-color: #4a4446;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  border-top: 2px solid #a5a19e;
+  border-radius: 20px 20px 0px 0px;
+  padding-bottom: 5px;
+}
+#display {
+  text-align: right;
+  padding-right: 1%;
+  color: #101413;
+  background-color: #becdc8;
+  font-weight: bold;
+  font-size: 22px;
+  border-top: 2px solid #1c1e1b;
+  border-left: 3px solid #1c1e1b;
+  border-right: 1px solid #1c1e1b;
+  border-bottom: 4px solid #a5aaad;
+  border-radius: 3px;
+}
+#buttons-container {
+  display: flex;
+  background-color: #4a4446;
+  padding-bottom: 20px;
+  border-radius: 0px 0px 20px 20px;
+  border-bottom: 2px solid #545361;
+  user-select: none;
+}
+#buttons-left {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 60%;
+  background-color: #4a4446;
+  grid-gap: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.num-button {
+  text-align: center;
+  background-color: #282423;
+  border-radius: 3px;
+  border-bottom: 3px solid #201913;
+  border-right: 4px solid #201913;
+  border-top: 1px solid #a09895;
+  border-left: 1px solid #817672;
+  padding-top: 5px;
+  height: 25px;
+}
+.num-button:active, .num-button.active {
+  border-top: 4px solid #201913;
+  border-left: 4px solid #201913;
+  border-bottom: none;
+  border-right: none;
+  color: #cecfcf;
+  background-color: #1f1c1b;
+}
+#buttons-right {
+  padding-top: 20px;
+  padding-right: 10px;
+  background-color: #4a4446;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 4px;
+  width: 40%;
+}
+.operator-button {
+  text-align: center;
+  background-color: #8b8283;
+  padding-top: 10px;
+  font-size: 80%;
+  height: 25px;
+  width: 80%;
+  border-radius: 12px;
+  border-top: 1px solid #c0cbc5;
+  border-bottom: 3px solid #322829;
+  border-right: 4px solid #322829;
+}
+.operator-button:active, .operator-button.active {
+  border-left: 3px solid #322829;
+  border-top: 3px solid #322829;
+  border-right: 1px solid #322829;
+  border-bottom: 1px solid #322829;
+  color: #cecfcf;
+  background-color: #696262;
+}
+.plus-button {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-left: 5px;
+  padding-top: 0px;
+  font-size: 30px;
+  height: 42px;
+  background-color: #7ab4c2;
+}
+#markdown-previewer-root {
+  border: 3px solid gray;
+  border-radius: 5px;
+  font-family: courier, Arial;
+  background-color: black;
+}
+#preview-text, #editor-title {
+  color: cyan;
+  border-top: 1px solid cadetblue;
+  border-left: 2px solid cadetblue;
+  border-bottom: 1px solid cadetblue;
+  border-right: 2px solid cadetblue;
+  width: 25%;
+  text-align: center;
+}
+#editor {
+  background-color: darkslategray;
+  color: antiquewhite;
+}
+#editor-container, #preview-container {
+  border-left: 5px solid cadetblue;
+}
+#preview {
+  border-top: 1px dashed cadetblue;
+  background-color: black;
+  color: chartreuse;
+  padding-left: 1%;
+}
+#preview a {
+  color: green;
+}
+#drum-machine-root {
+  color: white;
+  font-family: Courier, Arial;
+}
+#drum-machine {
+  background-color: black;
+  border: 2px solid darkslategray;
+  width: 70%;
+  margin: auto;
+  padding: 1%;
+  border-radius: 8px;
+  display: flex;
+}
+#drum-pads {
+  flex: 50%;
+  display: grid;
+  width: 50%;
+  grid-gap: 5px;
+  grid-template-columns: auto auto auto;
+  padding-right: 2%;
+}
+.drum-pad {
+  font-weight: bold;
+  text-align: center;
+  font-size: 125%;
+  border-radius: 6px;
+  background-color: silver;
+  color: midnightblue;
+  cursor: default;
+  user-select: none;
+}
+.functional .drum-pad:hover {
+  background-color: gray;
+  color: purple;
+  cursor: cell;
+}
+#output {
+  flex: 50%;
+  text-align: center;
+  border-left: 1px solid darkslategray;
+  width: 50%;
+}
+#display {
+  padding: 3%;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: darkslategray;
+  color: white;
+  border-radius: 5px;
+}
+.disabled {
+  opacity: 0.5;
+}
+#switch-box {
+  display: flex;
+}
+.switch-flex {
+  flex: 50%;
+  float: left;
+  width: 50%;
+  border: 1px dashed darkslategray;
+}
+.switch-grid {
+  display: grid;
+  grid: 'top' 'bottom';
+}
+.switch-name {
+  grid-area: top;
+}
+.switch-holder {
+  grid-area: bottom;
+}
+.switch-holder input:disabled + span, .switch-holder input:disabled + span + span {
+  opacity: 0.2;
+  cursor: default;
+}
+.mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1em;
+}
+.rocker {
+  display: inline-block;
+  position: relative;
+ /* SIZE OF SWITCH ============== All sizes are in em - therefore changing the font-size here will change the size of the switch. See .rocker-small below as example. */
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+}
+.rocker-small {
+  font-size: 0.75em;
+ /* Sizes the switch */
+  margin: 1em;
+}
+.rocker::before {
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #999;
+  border: 0.5em solid #eee;
+  border-bottom: 0;
+}
+.rocker input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch-left, .switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  transition: 0.2s;
+}
+.switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  transform: rotate(15deg) skewX(15deg);
+}
+.switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #bd5757;
+  color: #fff;
+}
+.switch-left::before, .switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  transform: skewY(-65deg);
+}
+.switch-left::before {
+  left: -0.4em;
+}
+.switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  transform: skewY(65deg);
+}
+input:checked + .switch-left {
+  background-color: #0084d0;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  transform: rotate(0deg) skewX(0deg);
+}
+input:checked + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+input:checked + .switch-left + .switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  transform: rotate(-15deg) skewX(-15deg);
+}
+input:checked + .switch-left + .switch-right::before {
+  background-color: #ccc;
+}
+.slider {
+  padding-top: 1px;
+  padding-bottom: 2px;
+  background-color: #363636;
+  opacity: 0.75;
+  height: 2px;
+  border: 1px solid #cfd1ba;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.slider:hover {
+  opacity: 1;
+}
+.slider:disabled {
+  opacity: 0.2;
+}
+.slider::thumb {
+  appearance: none;
+  width: 10%;
+  width: 5px;
+  height: 20px;
+  background: darkgray;
+  border: 3px inset #474754;
+}
+.slider::-moz-range-thumb {
+  appearance: none;
+  width: 10%;
+  width: 5px;
+  height: 20px;
+  background: darkgray;
+  border: 3px inset #474754;
+}
+/** I tried to make this look a little like a stopwatch. Used a couple gradients, google fonts, and used windows PowerTools color picker to grab various colors off stopwatch reference photos. To really make it pop, it could use some buttons on the top and side, and to be more circular. That would require more <divs> which I'm disinclined to pump out of React. **/
+#timer-twentyfive-root {
+  text-align: center;
+}
+#timer {
+  margin-top: 30px;
+  background-color: #f3d230;
+  border-radius: 50px 50px 25px 25px;
+  border-top: 8px solid #f1c332;
+  border-bottom: 8px solid #d88c3e;
+  filter: drop-shadow(2px 2px 2px #292d2e);
+  padding: 25px;
+  padding-top: 35px;
+  margin: auto;
+  width: 325px;
+  background: #f1db2b;
+  background: radial-gradient(circle, rgba(241, 219, 43, 1) 0%, rgba(247, 209, 54, 1) 55%, rgba(198, 128, 43, 1) 100%);
+}
+#titlebanner {
+  text-align: center;
+}
+#top-controls-container {
+  display: flex;
+}
+.length-control {
+  flex: 50%;
+}
+.control-label {
+  text-align: center;
+}
+.interval-control {
+  display: flex;
+  user-select: none;
+}
+.increment-button {
+  background-color: #3c3b36;
+  padding-top: 2%;
+  letter-spacing: 5px;
+  font-size: 150%;
+  flex: 33%;
+  text-align: center;
+}
+.increment-button:hover {
+  opacity: 0.5;
+}
+.length-label {
+  font-size: 40px;
+  font-family: 'Rubik Mono One', sans-serif;
+  flex: 33%;
+  text-align: center;
+}
+#timer-label {
+  font-size: 150%;
+  margin-right: 15%;
+  margin-left: 15%;
+  font-family: 'Noto Sans', 'Courier New';
+}
+.session-label {
+  text-align: right;
+  color: #f76136;
+}
+.break-label {
+  text-align: left;
+  color: #36f783;
+}
+#time-left {
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Rubik Mono One', sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.length-label, #time-left {
+  background-color: #c7cee1;
+  color: #1e2030;
+  border-top: 2px solid #181c2e;
+  border-left: 1px inset #181c2e;
+  border-right: 1px inset #181c2e;
+  border-bottom: 1px inset #181c2e;
+  text-shadow: 1px 2px 2px #1e2030;
+  user-select: none;
+}
+#bottom-controls {
+  display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.bottom-control {
+  flex: 50%;
+  text-align: center;
+  font-size: 125%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #3c3b36;
+}
+.bottom-control:hover {
+  opacity: 0.5;
+}
+.increment-button, .bottom-control {
+  font-family: 'Noto Sans', 'Courier New';
+  color: #b8efe9;
+  text-shadow: 1px 1px 1px #080808;
+  letter-spacing: 3px;
+  border-bottom: 3px solid #080808;
+  border-right: 3px solid #080808;
+  border-top: 1px solid #080808;
+  border-left: 1px solid #080808;
+  border-radius: 25px;
+  user-select: none;
+}
+#titlebanner, .control-label, .increment-button {
+  font-family: 'Noto Sans', 'Courier New';
+  letter-spacing: 1px;
+  color: #b8efe9;
+  user-select: none;
+}
+#inner-blue-area {
+  border-top: 15px solid #af6330;
+  border-left: 8px solid #af6330;
+  border-right: 8px solid #af6330;
+  border-bottom: 2px solid #faec93;
+  background-color: #384560;
+  background: #43406e;
+  background: radial-gradient(circle, rgba(67, 64, 110, 1) 68%, rgba(19, 19, 40, 1) 100%);
+  border-radius: 25px;
+}
+#quote-root {
+  margin-top: 10px;
+}
+#quote-root div {
+  color: MidnightBlue;
+}
+#quote-box {
+  margin: auto;
+  width: 50%;
+  padding: 2%;
+  border-radius: 5px;
+  border: 3px groove DarkBlue;
+  background-color: azure;
+}
+#quote-box #text {
+  font-size: 150%;
+  margin-bottom: 5%;
+  color: DarkBlue;
+}
+#quote-box #author {
+  font-size: 150%;
+  margin-bottom: 3%;
+}
+#tweet-quote {
+  text-decoration: none;
+  font-size: 150%;
+  color: DarkSlateBlue;
+}
+#new-quote {
+  font-size: 120%;
+  color: DarkSlateBlue;
+  margin-right: 5%;
+  margin-bottom: 20px;
+}
+#twitter-image-wrap {
+  display: inline-block;
+  margin-top: 25px;
+  width: 50px;
+  height: 50px;
+}
