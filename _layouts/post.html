@@ -18,8 +18,9 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
-  <div class="category-links">
-  {% for tag in page.tags %}
+  <div class="tag-links">
+  {% assign sorted_tags = page.tags | sort %}
+  |{% for tag in sorted_tags %}
     <a href="/tag-page.html?tag={{tag}}">{{tag}}</a> | 
   {% endfor %}
   </div>

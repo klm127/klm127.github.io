@@ -41,7 +41,7 @@ I wanted to include those projects on this blog, and not just with a link to [my
 
 The CSS styling was done in SCSS. Jekyll doesn't load that up by default. There's probably a Gem I could install, but instead I used a [scss to css converter](https://jsonformatter.org/scss-to-css). 
 
-My script used Babel preprocessing for the React syntax, of course. That meant I had to convert it to regular javascript in order to be able to include it as a `<script>` tag in this page. I followed [these instructions](https://babeljs.io/docs/en/babel-cli/) on the babel.js site and used npx and the command line to generate regular javascript.
+My script used Babel preprocessing for the React syntax, because writing React without JSX seems like a total drag. That meant I had to convert it to regular javascript in order to be able to include it as a `<script>` tag in this page. I followed [these instructions](https://babeljs.io/docs/en/babel-cli/) on the babel.js site and used npx and the command line to generate regular javascript.
 
 The cli in a directory with each of my files was:
 ```
@@ -72,7 +72,8 @@ This was the hardest project. Input validation is accomplished by regexes, as is
 
 Here's a snippet:
 
-```
+{%highlight javascript%}
+{%raw%}
 let tokens = []; 
 let token_finder = /(\-?\d+(\.\d+)?)|([\+*\/])/g;
 let results = [...str.matchAll(token_finder)];
@@ -92,7 +93,8 @@ for(let i = 0; i < results.length; i++ ) {
     }   
     tokens.push(r);       
 }
-```
+{%endraw%}
+{%endhighlight%}
 #### Explanation:
 1. An empty array for final tokens is initialized.
 1. The regex token_finder finds two groups, either numbers which may or may not have a leading negative sign and may or may not have decimal values or one of the operator signs (+,-,/,*) and the matches are put into an array called results.
@@ -142,12 +144,14 @@ Another stumbling block I ran across here was the twitter icon. Originally, I us
 
 I used a lifecycle function for that.
 
-```
+{%highlight javascript%}
+{%raw%}
 componentDidMount() {
       //for adding an svg to twitter <a>
       document.getElementById("tweet-quote").innerHTML = `<div id="twitter-image-wrap"><svg>...</svg></div>`;
 }
-```
+{%endraw%}
+{%endhighlight%}
 <div id="quote-root"></div>
 {% include snippet-in-page.html content="random-quote.js" %}
 
