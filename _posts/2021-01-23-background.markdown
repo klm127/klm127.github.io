@@ -3,6 +3,8 @@ layout: post
 title:  "First Post"
 date:   2021-01-23 18:50:31 -0500
 categories: jekyll webdev purpose background personal-history
+tags: jekyll webdev purpose background personal-history
+permalink: first-post
 ---
 
 Experimenting with new languages is a thrilling experience. Today, I dived into Ruby and Jekyll, the technology that is used to create this page. There is something extremely elegant about Ruby. I began doing the [ruby koans](http://www.rubykoans.com/), a collection of tests that teach you about the ruby language and offer satisfying feedback as you progress. I then worked my way through jekyll's [step by step tutorial](https://jekyllrb.com/docs/step-by-step/01-setup/) and ultimately created this site.

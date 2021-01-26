@@ -3,6 +3,7 @@ layout: post
 title:  "FreeCodeCamp.org Front End Libraries Certification and Snippets"
 date:   2021-01-24 18:35:31 -0500
 categories: jekyll webdev react javascript snippets free-code-camp
+tags: jekyll webdev react javascript snippets free-code-camp
 custom-javascript-list: 
     - "https://unpkg.com/react/umd/react.development.js" 
     - "https://unpkg.com/react-dom/umd/react-dom.development.js"
@@ -10,6 +11,7 @@ custom-javascript-list:
     - "https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.7/marked.js"
 custom-css-list: 
     - "2021-01-24-fcc-front-end.css"
+permalink: "freeCodeCamp-Front-End-Snippets"
 ---
 ## What's in this post
 
