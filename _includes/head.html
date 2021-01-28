@@ -4,9 +4,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="canonical" href="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
   {% include custom-scripts.html %}
 </head>
+<script>
+// Don't force http when serving the website locally, otherwise, force https
+if (!(window.location.host.startsWith("127.0.0.1")) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+</script>
