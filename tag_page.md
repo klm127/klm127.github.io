@@ -1,6 +1,7 @@
 ---
 layout: page
 permalink: tag-page.html
+description: page for individual tags
 ---
 <div id="tag-container">
 {% for site-tag in site.tags %}

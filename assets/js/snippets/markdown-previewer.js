@@ -31,7 +31,7 @@ column1 | col2
 val1 | val2
 
 you may also render images
-![a pic](https://viralcats.net/blog/wp-content/uploads/2017/12/Mean-looking-cat-Viral-Cats-05.jpg)
+![a pic](https://viralcats.net/blog/wp-content/uploads/2017/12/Mean-looking-cat-Viral-Cats-05.jpg "an evil looking cat")
 `;
 marked.setOptions({
   breaks: true

@@ -11,7 +11,8 @@ custom-javascript-list:
     - "https://cdnjs.cloudflare.com/ajax/libs/marked/1.2.7/marked.js"
 custom-css-list: 
     - "2021-01-24-fcc-front-end.css"
-permalink: "freeCodeCamp-Front-End-Snippets"
+permalink: "freeCodeCamp-Front-End-Cert-Snippets"
+description: Review of FreeCodeCamp.org Front End Libaries Certification and my 5 final projects, embedded.
 ---
 ## What's in this post
 
@@ -33,7 +34,7 @@ I take notes in [Freeplane](https://www.freeplane.org/wiki/index.php/Home), a mi
 
 ### My notes: .png export from Freeplane <span id="screen"></span>
 
-![freeplane screenshot]({{site.url}}/assets/images/2021-01-24-FreePlane-PNG-export.png)
+![freeplane screenshot]({{site.url}}/assets/images/2021-01-24-FreePlane-PNG-export.png "screenshot of a freeplane mindmap")
 
 ### Adding those projects to this website <span id="adding-snippets"></span>
 
@@ -185,7 +186,7 @@ I'm getting a _lot_ out of FreeCodeCamp. I'm going to keep going with it. Next u
 
 Plus, FreeCodeCamp.org offers certifications that show up on your linkedin!
 
-![FreeCodeCamp.org certification as it appears on LinkedIn]({{site.url}}/assets/images/fcc-front-end-certification.png)
+![FreeCodeCamp.org certification as it appears on LinkedIn]({{site.url}}/assets/images/fcc-front-end-certification.png "FreeCodeCamp certification on LinkedIn")
 
 That'll look nice with a Bachelor's Degree beside it! I'm looking forward to making a hefty donation to FCC, as soon as I'm employed.
 
