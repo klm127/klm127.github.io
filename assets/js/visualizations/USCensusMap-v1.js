@@ -83,6 +83,7 @@ class USCensusMap {
             .attr('stroke-color','black');
         //div for extrema values
         this.DOMcontainer.style.position = 'relative';
+        this.DOMcontainer.style.userSelect = "none";
         this.extremaDiv = d3.select(this.DOMcontainer)
             .append('div')
             .style('position','absolute')
