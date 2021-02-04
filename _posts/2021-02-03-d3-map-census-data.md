@@ -25,7 +25,7 @@ custom-css-list:
 <div id="us-map"></div>
 <script>
     const keymodeler = new KeyModeler(CENSUS_DATA["Alabama"],'KeyModeler-Selects');
-    const map = new USCensusMap(keymodeler,US_FEATURES,CENSUS_DATA,"us-map","mousemove","mouseleave",d3.interpolatePlasma,true,false);
+    const map = new USCensusMap(keymodeler,US_FEATURES,CENSUS_DATA,"us-map","mousemove touchmove","mouseleave touchend",d3.interpolatePlasma,true,false);
 </script>
 
 _Note_: Auto-map resizing is turned off: Refresh after resizing window if you want the map bigger.
