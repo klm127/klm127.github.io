@@ -28,8 +28,7 @@ twitter_username:
 github_username:  klm127
 
 # Build settings
-# was minima, trying midnight
-theme: jekyll-theme-midnight
+theme: minima
 plugins:
   - jekyll-feed
 hitstep_analytics: true

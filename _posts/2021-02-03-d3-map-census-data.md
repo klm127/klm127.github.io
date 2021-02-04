@@ -161,7 +161,7 @@ If you read this far, you probably already know what npm is. census-csv-parser w
 - [d3](https://github.com/d3/d3/blob/master/API.md)
 
 I definitely upped my skills with d3 more than I would have just doing the FCC certifications. It's an incredible library, though sometimes the documentation is a bit tricky to parse. I wish they had different examples. I did find a couple of other good posts that helped me, like [this one](https://www.d3indepth.com/geographic/) from d3indepeth and 
-[this one](https://bl.ocks.org/mbostock/5562380) from Mike Bostock, the creater of d3. 
+[this one](https://bl.ocks.org/mbostock/5562380) from Mike Bostock, the creator of d3. 
 
 - [mapshaper](https://mapshaper.org/)
 
