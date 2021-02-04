@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
+<span id="toplink"></span>
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -14,10 +14,11 @@ layout: default
         • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
       {%- endif -%}</p>
   </header>
-
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+  
+  <div><a href="#toplink">Go to Top</a></div>
   <div class="tag-links">
   {% assign sorted_tags = page.tags | sort %}
   |{% for tag in sorted_tags %}

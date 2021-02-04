@@ -2,7 +2,9 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {%- include head.html -%}
-
+  {% for js in page.local-js-dependencies %}
+  <script src="{{site.baseurl}}/assets/js/{{ js }}"></script>
+{% endfor %}
   <body>
 
     {%- include header.html -%}

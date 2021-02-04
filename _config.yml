@@ -28,12 +28,14 @@ twitter_username:
 github_username:  klm127
 
 # Build settings
-theme: minima
+# was minima, trying midnight
+theme: jekyll-theme-midnight
 plugins:
   - jekyll-feed
 hitstep_analytics: true
 favicon: potion32x32.png
-
+exclude: 
+  - _notes-no-publish/
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

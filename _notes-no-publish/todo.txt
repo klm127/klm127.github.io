@@ -1,0 +1,2 @@
+- Set up javascript to add links near each h1 element, so users can click them to go back to the top
+- And/Or add a "top" link to the bottom

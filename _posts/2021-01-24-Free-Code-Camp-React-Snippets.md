@@ -4,7 +4,7 @@ title:  "FreeCodeCamp.org Front End Libraries Certification and Snippets"
 date:   2021-01-24 18:35:31 -0500
 categories: jekyll webdev react javascript snippets free-code-camp
 tags: jekyll webdev react javascript snippets free-code-camp
-custom-javascript-list: 
+external-js-dependencies: 
     - "https://unpkg.com/react/umd/react.development.js" 
     - "https://unpkg.com/react-dom/umd/react-dom.development.js"
     - "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"

@@ -7,7 +7,7 @@
     Takes page.custom-css-list varialbe and renders link tag for each item in it.
 {% endcomment %}
 
-{% for javascript in page.custom-javascript-list %}
+{% for javascript in page.external-js-dependencies %}
     <script src="{{ javascript }}"></script>
 {% endfor %}
 
