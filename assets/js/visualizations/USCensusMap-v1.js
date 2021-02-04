@@ -123,6 +123,7 @@ class USCensusMap {
               .attr("stroke-width",0.5)
               .attr("fill","white")
               .attr("user-select","none")
+              .style("user-select","none")
               .attr("d", d3.geoPath().projection(albers))
               .on(this.tooltipShowEventType, (feature) => {
                     this.tooltipShow(event,feature);
