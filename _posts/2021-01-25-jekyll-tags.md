@@ -9,7 +9,7 @@ permalink: "Quick-Jekyll-Tags"
 
 # What's in this post
 
-Quicky add tags functionality to a Jekyll site. Do it once and never have to mess with it again.
+Quickly add tags functionality to a Jekyll site. Do it once and never have to mess with it again.
 
  - [Intro](#intro)
  - [Create the Tag Index Page](#create-the-tag-index-page)
