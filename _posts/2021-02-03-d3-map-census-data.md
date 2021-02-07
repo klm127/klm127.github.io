@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "United States Census Marital Data, Visualized"
+title:  "Experiments in Data Visualization - Choropleth"
 date:   2021-02-03 18:00:00 -0500
 categories: javascript data chloropleths visualization census
 tags: javascript data choropleth visualization census
@@ -20,6 +20,8 @@ custom-css-list:
 
 # The Visualization
 
+<h4 style='text-align:center;'><em>US Census Marital Data, by State</em></h4>
+
 <div id="KeyModeler-Selects">
 </div>
 <div id="us-map"></div>
@@ -27,12 +29,7 @@ custom-css-list:
     const keymodeler = new KeyModeler(CENSUS_DATA["Alabama"],'KeyModeler-Selects');
     const map = new USCensusMap(keymodeler,US_FEATURES,CENSUS_DATA,"us-map","mousemove touchstart","mouseleave touchend",d3.interpolatePlasma,true,false);
 </script>
-
-_Note_: Auto-map resizing is turned off: Refresh after resizing window if you want the map bigger.
-
-_Note_: Handling the text for mobile better will happen next version!
-
-_Note_: Some of the data points are missing(map displays all black) and some of the properties chain is a little redundant. This will get fixed in a future version. 
+<br />
 
 # Intro
 
@@ -43,6 +40,7 @@ I had a week before Spring classes started and was chugging through [FreeCodeCam
  - [Intro](#intro)
  - [Getting the Data](#getting-the-data)
  - [Cleaning the Data - building census-csv-parser](#cleaning-the-data-building-census-csv-parser)
+ - [Building KeyModeler.js](#building-keymodelerjs)
  - [Building USCensusMap.js](#building-uscensusmapjs)
  - [What I Learned](#what-i-learned)
  - [What's Next](#whats-next)
@@ -102,9 +100,9 @@ I decided, **all of it!**
 
 What's better than one data-colorized chloropleth? A chloropleth that can visualize a wide range of data on the same map! 
 
-I needed an object that would generate DOM Elements a user could interact it with which would describe what data metric was sought. For that purpose, I built the [KeyMapper](https://github.com/klm127/us-census-chloropleth-viewer-data-selector/blob/master/KeyModeler.js). This is seen as the series of drop down menus above the map at the top of this page. The KeyMapper is given a model object on construction. For example, "Alabama". A KeyMapper instance traverses the keys of the model object and generates an [HTMLSelect Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) for each key, with the options being the next keys/paths. When it hits a final value, it stops. When an earlier select box is changed, it deletes the subsequent boxes and generates appropriate select boxes and options for that traversal path. It contains and updates an array representing the currently selected values. If it is passed an object with the same structure as its' model object, it traverses the keys of that object until it finds the value at those coordinates.
+I needed an object that would generate DOM Elements a user could interact it with which would describe what data metric was sought. For that purpose, I built [KeyModeler](https://github.com/klm127/us-census-chloropleth-viewer-data-selector/blob/master/KeyModeler.js) to enable user interaction with data selection. KeyModeler is given a model object on construction. For example, "Alabama". KeyMapper traverses the keys of the model object and generates an [HTMLSelect Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) for each key, with the options being the next keys/paths. When it hits a final value, it stops. When an earlier select box is changed, it deletes the subsequent boxes and generates appropriate select boxes and options for that traversal path. It contains and updates an array representing the currently selected values. If it is passed an object with the same structure as its' model object, it traverses the keys of that object, based on the keys that have been selected by the user, until it finds the value at those coordinates.
 
-Here's that method. Simple, but I enjoyed writing it.
+Here's that method for retrieving the selected value from an object of the same schema as KeyModeler's model object. Simple, but I enjoyed writing it.
 {% highlight javascript %}
 getPropVal(parallelObject) {
     this.selectedValues.forEach( (val) => {
@@ -124,7 +122,7 @@ getPropVal(parallelObject) {
 KeyModeler is totally flexible.
 - Zero dependencies
 - Takes any object as a model
-- No built in styling of any kind but sets the class names `KeyModeler-Select` and `KeyModeler-Option` for CSS hooks.
+- No built in styling of any kind but sets the class names for CSS hooks.
 
 I intend to reuse this class a lot for future data visualizations. Or, at least, for deciding on interesting data visualizations. 
 
@@ -149,20 +147,20 @@ Basically, the maximum for my [domains](https://github.com/d3/d3-scale/blob/v3.2
 
 I'm a little embarrassed at how long it took me to figure out what was going on. I was actually halfway through writing the div that shows the minimum and maximum points of data when I figured it out.
 
-There's no particular part of this code that I feel the need to show off, though I really like some of its functionality. For example, it can be given multiple event names to trigger the tooltip appearance and hiding, which by default are "[mouseenter](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event) [touchstart](https://developer.mozilla.org/en-us/docs/Web/Events/touchstart)", so it works decently well on mobile. 
+There's no particular part of this code that I feel the need to show off, though I really like some of its functionality. For example, it can be given multiple event names to trigger the tooltip appearance and hiding, which by default are "[mouseenter](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event) [touchstart](https://developer.mozilla.org/en-us/docs/Web/Events/touchstart)", so it works decently well on mobile. All USCensusMap.js does is pass those event types to d3 when it calls [_selection_.on](https://github.com/d3/d3-selection/blob/v2.0.0/README.md#selection_on) as it renders.
 
 This was designed with just the United States in mind and, for now, has the geoAlbers projection built in. But that is really the only part strictly dependent on U.S. Data. When it's time to create some worldwide visualizations, I'll just make a few changes and re-use this class.
 
-You can find the code [here](https://github.com/klm127/us-census-chloropleth-viewer-data-selector/blob/master/USCensusMap.js). Documentation to come soon.
+You can find the code [here](https://github.com/klm127/us-census-chloropleth-viewer-data-selector/blob/master/USCensusMap.js). It's somewhat documented in the code, but I'll generate the jsdoc website for it too soon.
 
 # What I Learned
 
 - [jsdoc](https://jsdoc.app/)
 
-Just like Javadoc, really! Quickly generate html pages from your code, like [I did for census-csv-parser.](https://www.quaffingcode.com/census-csv-parser/doc/index.html) There's a number of templates out there. I wound up using [minami](https://github.com/Nijikokun/minami)
+Very much like Javadoc! Glad there seems to be a general conventions for documentation markup. Quickly generate html pages from your code, like [I did for census-csv-parser.](https://www.quaffingcode.com/census-csv-parser/doc/index.html) There's a number of templates out there. I wound up using [minami](https://github.com/Nijikokun/minami)
 - [npm](https://www.npmjs.com/)
 
-If you read this far, you probably already know what npm is. census-csv-parser was the first npm module I've [published](https://www.npmjs.com/package/census-csv-parser), And  - **holy cow** I just noticed I have 74 downloads! Who the heck has found my package? That's awesome!
+If you read this far, you probably already know what npm is. census-csv-parser was the first npm module I've [published](https://www.npmjs.com/package/census-csv-parser), And  - **holy cow** I just noticed I have 74 downloads! Who the heck has found my package? That's awesome! Now I feel obligated to get started on version 2.
 
 - [d3](https://github.com/d3/d3/blob/master/API.md)
 
@@ -179,25 +177,12 @@ I wrote unit tests as I wrote `census-csv-parser`. I had never written unit test
 
 # What's Next
 
-- Fix up some styling issues with USCensusMap, especially for mobile. Maybe make the minimum extrema div an optional pop-out.
+- Improve styling of USCensusMap.js for mobile.
 - Cleaning up and publishing documentation for `KeyMapper.js` and `USCensusMap.js`
 - Publishing more data visualizations of interesting census data with this same code. (I can just pump them out now!)
-- More functionality for `census-csv-parser` - more utility functions and more Parser functions. Especially more statistical-oriented ones. For instance, it should be able to generate variance and standard deviation columns. 
-- Maybe make `census-csv-parser` add its utility functions to arrays or do callbacks, so you can do those sweet chained function calls like in d3. Usage could look something like this:
-{% highlight javascript %}
-    let arr = util.csvArray(content)
-        .transpose()
-        .chop(arr,0)
-        .chopColumn(arr,0)
-        .clear()
-        .numerify()
-        .clear(/Margin of Error!!/)
-        .clear(/Estimate!!/)
-{% endhighlight %}
-  I'd really have a sexy modern library if you could do all that! _Just to be clear_, that's not how it works now. [This is how it currently works](https://www.quaffingcode.com/census-csv-parser/doc/Example.html#.example)
+- More functionality for `census-csv-parser` - more utility functions and more Parser functions. Especially more statistical-oriented ones. For instance, it should be able to generate variance and standard deviation columns. Also, it needs a **Command Line Interface** and **Method Chaining**.
 - Visualizations of county level data. County level data is more granular and thus more interesting.
 - Complete Free Code Camp's Data Visualization Certification
-- Load up a better template and color scheme for this page that's **dark** - I can't stand this white theme any more!
 
 That's it, thanks for reading!
 
