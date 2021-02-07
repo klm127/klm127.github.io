@@ -67,7 +67,8 @@ class USCensusMap {
             .append('svg')
             .attr('id','USCensus-map-svg')
             .attr('width',width)
-            .attr('height',height);
+            .attr('height',height)
+            .attr('alt','A map of US States, colored based on user selected data');
         //title SVG - used in renderData
         this.titleSVG = svg.append('text')
             .attr('y',width/35)

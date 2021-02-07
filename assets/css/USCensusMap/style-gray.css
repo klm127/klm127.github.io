@@ -1,6 +1,7 @@
 #USCensusTooltip {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(241, 241, 241,0.7);
+    color: black;
     padding:4px;
     border-radius: 4px;
 }
