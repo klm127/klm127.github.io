@@ -33,7 +33,7 @@ custom-css-list:
 
 # Intro
 
-In the week antecedent to the commencement of Spring semester, I was improving my javascript by chugging through another FreeCodeCamp certification, [Data Visualization](https://www.freecodecamp.org/learn){:target="_blank"}. The course explores [d3](https://d3js.org/){:target="_blank"}, a flexible, powerful, and ubiquitous javascript library that is at the center of most in-browser data visualizations. When I reached Project 4, [Visualize Data with a Choropleth Map](https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map){:target="_blank"}, I decided I had to put the cert on hold and dive deep into d3 and choropleths. I've always loved the texture and color of a good map, especially one that provides real information. So I embarked on what turned out two be two projects - a [data cleaner](https://www.quaffingcode.com/census-csv-parser/doc/index.html){:target="_blank"} for Node.js and [a pair of visualizer and selector classes](https://github.com/klm127/us-census-chloropleth-viewer-data-selector){:target="_blank"}, demonstrated at the head of this page.
+In the week antecedent to the commencement of Spring semester, I was improving my javascript by chugging through another FreeCodeCamp certification, [Data Visualization](https://www.freecodecamp.org/learn){:target="_blank"}. The course explores [d3](https://d3js.org/){:target="_blank"}, the flexible, powerful, and ubiquitous javascript library that is at the center of most in-browser data visualizations. When I reached Project 4, [Visualize Data with a Choropleth Map](https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map){:target="_blank"}, I decided I had to put the cert on hold and dive deep into d3 and choropleths. I've always loved the texture and color of a good map, especially one that provides real information. So I embarked on what turned out to be two projects - a [data cleaner](https://www.quaffingcode.com/census-csv-parser/doc/index.html){:target="_blank"} for Node.js and [a pair of visualizer and selector classes](https://github.com/klm127/us-census-chloropleth-viewer-data-selector){:target="_blank"}, demonstrated at the head of this page.
 
 # Table of Contents
  - [The Visualization](#the-visualization)
@@ -55,7 +55,7 @@ GeoJson is a standardized format. The wrapper object consists of sub-objects rep
 Census data, on the other hand, not so much.
 # Cleaning the Data, Building census-csv-parser
 
-Census data is ugly. Like, [really ugly](https://github.com/klm127/census-csv-parser/blob/master/test_data/maritaldataLarge.csv){:target="_blank"}. Downloaded raw, it has 57 rows and **364** columns. And column headers have names like
+Census data is ugly. [Really ugly](https://github.com/klm127/census-csv-parser/blob/master/test_data/maritaldataLarge.csv){:target="_blank"}. Downloaded raw, this chunk of marital data has 57 rows and **364** columns. And column headers have names like
 >Estimate!!Never married!!LABOR FORCE PARTICIPATION!!Males 16 years and over
 
 Oof. 
@@ -125,56 +125,52 @@ KeyModeler is totally flexible.
 - Takes any object as a model
 - No built in styling of any kind but sets the class names for CSS hooks.
 
-I intend to reuse this class a lot for future data visualizations. Or, at least, for deciding on interesting data visualizations. 
+I intend to reuse this class for future data visualizations, unless I find something that already does this better in [observable](https://github.com/observablehq){:target="_blank"}.
 
 # Building USCensusMap.js
 
 FreeCodeCamp's [Chloropleth Project](https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map){:target="_blank"} has you use a provided TopoJson file, which requires an external dependency. I wanted to use the raw GeoJson files, because that is how map data is publicly available. Plus, d3 has a ton of [useful functions](https://github.com/d3/d3/blob/master/API.md#projections){:target="_blank"} for working with GeoJson files, like projections. I used the most obvious and familiar projection, [d3.geoAlbersUSA](https://github.com/d3/d3-geo/blob/v2.0.0/README.md#geoAlbersUsa){:target="_blank"} for this.
 
 There's a lot I could say about USCensusMap, but rather than wax poetical, I'm just going to provide a list of facts:
-- A class
 - Takes GeoJson data to be mapped and Census data to be rendered in color.
-- Uses [d3 sequential multi-hue interpolators](https://github.com/d3/d3/blob/master/API.md#user-content-sequential-multi-hue), though I might be changing that in the near future; a simpler two color range mapping might be easier for the viewer to understand.
-- Takes an instance of KeyMapper.js as a parameter, and needs it to figure out what property to map!
+- Uses [d3 sequential multi-hue interpolators](https://github.com/d3/d3/blob/master/API.md#user-content-sequential-multi-hue), though I might be changing that in the near future; a simpler two color range mapping may be easier for the viewer to instantly understand.
+- Takes an instance of KeyMapper.js as a parameter, and uses it to figure out what property it should map.
 - Has two separate render functions for performance - one for rendering the map, one for rendering the data.
     - The map rendering only happens once, unless it's set to auto-resize mode. Then it happens whenever the window size changes.
     - The data mapping happens whenever the user-selected property in KeyMapper.js changes. USCensusMap.js attaches a listener to KeyMapper.
 - Re-scales the color scheme each time a data render happens, and displays the extrema of the data.
 - Uses no styling but can be styled with CSS Hooks.
 
-The biggest frustration building the map portion happened near the end. I had everything working almost perfectly, but when displaying total population, most states were showing nearly black. It wasn't until I checked through all the [projections](https://github.com/d3/d3-geo/blob/v2.0.0/README.md#geoAlbers){:target="_blank"}, [color interpolator](https://github.com/d3/d3/blob/master/API.md#user-content-sequential-multi-hue){:target="_blank"}, [scales](https://github.com/d3/d3-scale/blob/v3.2.2/README.md#scaleSequential){:target="_blank"}, [path rendering](https://github.com/d3/d3-geo/blob/v2.0.0/README.md#paths){:target="_blank"}, and [joins](https://github.com/d3/d3-selection/blob/v2.0.0/README.md#selection_enter){:target="_blank"} - and broke the code a few times - that I realized `USCensusMap.js` was working perfectly... but _I was including the U.S. totals in the dataset_. That wasn't as obvious for percentage-style metrics, but was glaringly apparent for totals. 
+The biggest frustration building the map portion happened near the end. I had everything working almost perfectly, but when displaying total population, most states were showing nearly black. It wasn't until I checked through all the [projections](https://github.com/d3/d3-geo/blob/v2.0.0/README.md#geoAlbers){:target="_blank"}, [color interpolator](https://github.com/d3/d3/blob/master/API.md#user-content-sequential-multi-hue){:target="_blank"}, [scales](https://github.com/d3/d3-scale/blob/v3.2.2/README.md#scaleSequential){:target="_blank"}, [path rendering](https://github.com/d3/d3-geo/blob/v2.0.0/README.md#paths){:target="_blank"}, and [joins](https://github.com/d3/d3-selection/blob/v2.0.0/README.md#selection_enter){:target="_blank"} - and broke the code a few times - that I realized `USCensusMap.js` was working perfectly... but _I was including the U.S. totals in the dataset_. That wasn't obvious for percentage-style metrics, but was glaringly apparent for totals. 
 
-Basically, the maximum for my [domains](https://github.com/d3/d3-scale/blob/v3.2.2/README.md#continuous_domain){:target="_blank"}, used by my [scales](https://github.com/d3/d3-scale/tree/v3.2.2){:target="_blank"} were being set to the sum total of the entire country, making every single state appear to be near the minimum value by comparison!
+Basically, the maximums for my [domains](https://github.com/d3/d3-scale/blob/v3.2.2/README.md#continuous_domain){:target="_blank"}, used by my [scales](https://github.com/d3/d3-scale/tree/v3.2.2){:target="_blank"} were being set to the sum total of the entire country, making every single state appear to be near the minimum value by comparison.
 
-I'm a little embarrassed at how long it took me to figure out what was going on. I was actually halfway through writing the div that shows the minimum and maximum points of data when I figured it out.
+I'm a little embarrassed at how long it took me to figure out what was going on. I was halfway through writing the div that shows the minimum and maximum points of data when I finally figured it out.
 
-There's no particular part of this code that I feel the need to show off, though I really like some of its functionality. For example, it can be given multiple event names to trigger the tooltip appearance and hiding, which by default are "[mouseenter](https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseenter_event){:target="_blank"} [touchstart](https://developer.mozilla.org/en-us/docs/Web/Events/touchstart){:target="_blank"}", so it works decently well on mobile. All USCensusMap.js does is pass those event types to d3 when it calls [_selection_.on](https://github.com/d3/d3-selection/blob/v2.0.0/README.md#selection_on){:target="_blank"} as it renders.
-
-This was designed with just the United States in mind and, for now, has the geoAlbers projection built in. But that is really the only part strictly dependent on U.S. Data. When it's time to create some worldwide visualizations, I'll just make a few changes and re-use this class.
-
-You can find the code [here](https://github.com/klm127/us-census-chloropleth-viewer-data-selector/blob/master/USCensusMap.js){:target="_blank"}. It's somewhat documented in the code, but I'll generate the jsdoc website for it too soon.
+You can find the code [here](https://github.com/klm127/us-census-chloropleth-viewer-data-selector/blob/master/USCensusMap.js){:target="_blank"}. I intend to generate jsdoc from the code when it has been improved somewhat.
 
 # What I Learned
 
 - [jsdoc](https://jsdoc.app/){:target="_blank"}
 
-Very much like Javadoc! Glad there seems to be a general conventions for documentation markup. Quickly generate html pages from your code, like [I did for census-csv-parser.](https://www.quaffingcode.com/census-csv-parser/doc/index.html){:target="_blank"} There's a number of templates out there. I wound up using [minami](https://github.com/Nijikokun/minami){:target="_blank"}
+Very much like Javadoc. I'm glad there are general conventions for all documentation markup. Quickly generate html pages from your code, like [I did for census-csv-parser.](https://www.quaffingcode.com/census-csv-parser/doc/index.html){:target="_blank"} There's a number of templates out there. I wound up using [minami](https://github.com/Nijikokun/minami){:target="_blank"}. 
+
 - [npm](https://www.npmjs.com/){:target="_blank"}
 
-If you read this far, you probably already know what npm is. census-csv-parser was the first npm module I've [published](https://www.npmjs.com/package/census-csv-parser){:target="_blank"}, And  - **holy cow** I just noticed I have 74 downloads! Who the heck has found my package? That's awesome! Now I feel obligated to get started on version 2.
+If you read this far, you probably already know what npm is. `census-csv-parser` was the first npm module I've [published](https://www.npmjs.com/package/census-csv-parser){:target="_blank"}. Somehow it already has over 80 downloads, which means I need to get going on version 2 ASAP.
 
 - [d3](https://github.com/d3/d3/blob/master/API.md){:target="_blank"}
 
-I definitely upped my skills with d3 more than I would have just doing the FCC certifications. It's an incredible library, though sometimes the documentation is a bit tricky to parse. I wish they had different examples. I did find a couple of other good posts that helped me, like [this one](https://www.d3indepth.com/geographic/){:target="_blank"} from d3indepeth and 
+I definitely improved my familiarity with d3 more than I would have just doing the FCC certifications. It's an incredible library, though sometimes the documentation can be tricky to parse. Fortunately, a lot has been written about d3. A couple of good posts helped me, like [this one](https://www.d3indepth.com/geographic/){:target="_blank"} from d3indepeth and 
 [this one](https://bl.ocks.org/mbostock/5562380){:target="_blank"} from Mike Bostock, the creator of d3. 
 
 - [mapshaper](https://mapshaper.org/){:target="_blank"}
 
-Ok, I haven't fully _learned_ this one yet, but I did use this to reduce the size of my GeoJson a little bit. It's a useful tool, so I'm including it here for reference. It has an in-browser command line with _all_ kinds of options.
+I haven't fully _learned_ mapshaper yet, but I did use it to reduce the file size of my GeoJson. It's a required stop for any serious choroplether. It has a powerful command line interface which I only brushed the surface of. At the very least, it will considerably shrink the size of your complex GeoJson file by calculating more efficient arcs. You can set the compression level with a slider at the top of the browser after drag-dropping your GeoJson right into the window.
 
 - unit tests are a godsend
 
-I wrote unit tests as I wrote `census-csv-parser`. I had never written unit tests before, mostly because it was a little intimidating and I was getting away with logging stuff on the console. This was a more complex library, and I was determined to get over my fear of testing. In many cases, I wrote the tests before I wrote the function. This was absolutely critical to getting the project done in a reasonable time frame. I found tons of problems that I would not have discovered otherwise. It was especially key for catching me when I would break parts of my code long after originally writing it.
+I wrote unit tests as I wrote `census-csv-parser`. I had never written unit tests before, mostly because it was intimidating and I was getting away with logging stuff on the console. This was a more complex library, and I was determined to get over my fear of testing. In many cases, I wrote the tests before I wrote the function. This was critical to getting the project done in a reasonable time frame. I found many problems that I would not have discovered otherwise. On several occasions, my thorough unit tests caught be breaking earlier code when implementing new functionalities. 
 
 # Insights from the Visualization
 
@@ -192,12 +188,12 @@ While the purpose of this project was to practice coding, no data visualization 
 
 # What's Next
 
-- Improve styling of USCensusMap.js for mobile.
+- Improve styling of USCensusMap.js for mobile and tweaking the projection to show P.R. and D.C.
 - Cleaning up and publishing documentation for `KeyMapper.js` and `USCensusMap.js`
-- Publishing more data visualizations of interesting census data with this same code. (I can just pump them out now!)
+- Publishing more data visualizations of interesting census data using these projects as boilerplate.
 - More functionality for `census-csv-parser` - more utility functions and more Parser functions. Especially more statistical-oriented ones. For instance, it should be able to generate variance and standard deviation columns. Also, it needs a **Command Line Interface** and **Method Chaining**.
 - Visualizations of county level data. County level data is more granular and thus more interesting.
 - Complete Free Code Camp's Data Visualization Certification
 
-That's it, thanks for reading!
+Thanks for reading!
 
