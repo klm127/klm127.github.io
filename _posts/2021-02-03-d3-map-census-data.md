@@ -176,15 +176,27 @@ I wrote unit tests as I wrote `census-csv-parser`. I had never written unit test
 
 While the purpose of this project was to practice coding, no data visualization is complete without at least _some_ observations about the data.
 
-- The most married state is Utah, at 56%.
-- The least married area is Washington D.C., at 33%.
-- Washington D.C.s low marriage rates are not accounted for by a younger profesisonal population, as I initially speculated. Puerto Rico actually has the lowest marriage rate until age 34, when D.C. takes the lead. This trend is true for both males and females.
-- The most widowed state is New Mexico, by a long shot, recording a rate of 0.8%. This is driven by a high rate of female widows - 0.5%. It's not entirely an elderly population that accounts for this either; widows from age 20-34 account for a whopping 4.3% of New Mexican widows.
-- The most divorced state is Arkansas, at 5.1%, while the least divorced region is D.C., probably because nobody gets married there in the first place.
-- The most divorced state for whites is Montana, at 12.1%, while the least divorced for whites is its neighbor North Dakota, at only 1.3%. American Indians also have a right rate of divorce in Montana, at 19.1%. The most married state for whites is Hawaii, at 50.5%.
-- For blacks, the most divorced state is Illinois, at 16.7%. The most married state is Alabama, at 49%, followed closely by Louisiana, at 48.5%. 
-- The most separated state is Oklahoma at 3.6%. Most of the south and lower midwest has higher relatively higher separation rates and relatively lower divorce rates, possibly indicating an aversion to divorce. New York, however, has a separation rate nearly twice its (low) divorce rate.
-- The most never married region was the District of Columbia, at a whopping 39.3%. Nothing comes close. Mirroring the marriage rates, the least never-married state was Utah, at only 9.9%. The lowest never-married states for whites was Mississippi, at 28.9% while for blacks it was North Dakota, at 33.3%. Surprisingly, North Dakota is adjacent to one of the most least-married states for blacks - Minnesota, at nearly 60%.
+- The most married state is Utah, at 55%. The nuptial practices of Utah's large mormon population reasonably explain this. 
+
+- Washington D.C. has an incredibly low marriage rate. Double digits away from anywhere else. Only 30% married and almost 60% never married. This isn't just due to a young population. In the 35-44 age bracket, 50% of D.C. males have never married. Most states are in the 20% range, with New Mexico at 33%. In D.C., 46.2% of females in that age range have never married, where not a single state breaks 30%. The gap only widens past 54. The marriage rate in D.C. is an extreme outlier. It's shocking, really. Apparently those who work for the federal government aren't too keen on raising families. Maybe their careers are too demanding, there is anti-family culture in D.C., or that city and work just attracts a certain kind of person, perhaps one who loves nothing so much as power.
+
+- The D.C. gap isn't racial either. D.C. leads the pack in whites and blacks, and in almost all age ranges. 
+
+- The runners up for the highest never-married rates are Massachusetts, New York, with around 40% never-married, which is still a far cry from D.C.s 56.8%.
+
+- The map is a little different when looking at the African American population. D.C. still leads by a wide margin, except for Wisconsin, which shows up out of nowhere with almost as high a rate - 62.8% to D.C's 63.2%.
+
+- The most widowed state is West Virginia, at 7.9%. Much of this is certainly due to the historically brutal conditions of coal mining, but West Virginia also shares first place with Oklahoma and Indiana as highest widower rate amongst males ages 20 to 34. I hypothesize that the wave of opiate use that swept the Mountain State from the early 2000s on contributes to this statistic.
+
+- The most divorced state is Maine, at 14%. The District of Columbia is actually the LEAST divorced region - not enough people get married there in the first place to get divorced! New Jersey, Utah, and New York are close behind. I suggest that for those Northeast states, the high never-married rate explains the low divorce rate, but for Utah, the high religiosity discourages divorce.
+
+- The statistics change a little when looking at only women. The most divorced states for women are Nevada and Florida, whereas for men it's definitely Maine. I wonder if this reflects where people like to start over after a divorce, rather than where they got divorced in the first place. Clearly, there tends to be some migration after a divorce, or the states would align more exactly across the sexes.
+
+- I can't speculate as to why this is, but for Hispanics or Latinos, the most married states are West Virginia and Florida and the least is Vermont with the Northeast not too far behind. Vermont also shows up as the place with the highest rate of divorced African Americans, at 17.5%. Alaska is not far behind, at 16.6%. I hold to my hypothesis regarding relocation after divorce, and these states being "retreat" states. For Asians, the most divorced state is Montana, at 12.1%, which could also be considered a "retreat" state.
+
+- The separation rate tends higher in the Southeast. This may reflect cultural taboos against divorce.
+
+
 
 # What's Next
 
