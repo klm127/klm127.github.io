@@ -33,7 +33,7 @@ custom-css-list:
 
 # Intro
 
-I had a week before Spring classes started and was chugging through [FreeCodeCamp's](https://www.freecodecamp.org/learn){:target="_blank"} Data Visualization certification. FCC teaches the basics of [d3](https://d3js.org/){:target="_blank"}, and I was instantly impressed with the flexibility of this data visualization library. As always with FCC, I learned a ton, and was ready to get my certification. But when I hit project 4, [Visualize Data with a Choropleth Map](https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map){:target="_blank"}. I fell in love. I've always liked the texture and color of a good map, especially one that gives you some real information, and I was instantly hooked on the idea of tying data to a map with colors and a tooltip. So I put my certification on pause and embarked on what turned out two be two projects - a [data cleaner](https://www.quaffingcode.com/census-csv-parser/doc/index.html){:target="_blank"} for Node and [a pair of visualizer and selector classes](https://github.com/klm127/us-census-chloropleth-viewer-data-selector){:target="_blank"} for use with d3.
+In the week antecedent to the commencement of Spring semester, I was improving my javascript by chugging through another FreeCodeCamp certification, [Data Visualization](https://www.freecodecamp.org/learn){:target="_blank"}. The course explores [d3](https://d3js.org/){:target="_blank"}, a flexible, powerful, and ubiquitous javascript library that is at the center of most in-browser data visualizations. When I reached Project 4, [Visualize Data with a Choropleth Map](https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map){:target="_blank"}, I decided I had to put the cert on hold and dive deep into d3 and choropleths. I've always loved the texture and color of a good map, especially one that provides real information. So I embarked on what turned out two be two projects - a [data cleaner](https://www.quaffingcode.com/census-csv-parser/doc/index.html){:target="_blank"} for Node.js and [a pair of visualizer and selector classes](https://github.com/klm127/us-census-chloropleth-viewer-data-selector){:target="_blank"}, demonstrated at the head of this page.
 
 # Table of Contents
  - [The Visualization](#the-visualization)
@@ -43,6 +43,7 @@ I had a week before Spring classes started and was chugging through [FreeCodeCam
  - [Building KeyModeler.js](#building-keymodelerjs)
  - [Building USCensusMap.js](#building-uscensusmapjs)
  - [What I Learned](#what-i-learned)
+ - [Insights From the Visualization](#insights-from-the-visualization)
  - [What's Next](#whats-next)
 
 # Getting the Data
@@ -174,6 +175,20 @@ Ok, I haven't fully _learned_ this one yet, but I did use this to reduce the siz
 - unit tests are a godsend
 
 I wrote unit tests as I wrote `census-csv-parser`. I had never written unit tests before, mostly because it was a little intimidating and I was getting away with logging stuff on the console. This was a more complex library, and I was determined to get over my fear of testing. In many cases, I wrote the tests before I wrote the function. This was absolutely critical to getting the project done in a reasonable time frame. I found tons of problems that I would not have discovered otherwise. It was especially key for catching me when I would break parts of my code long after originally writing it.
+
+# Insights from the Visualization
+
+While the purpose of this project was to practice coding, no data visualization is complete without at least _some_ observations about the data.
+
+- The most married state is Utah, at 56%.
+- The least married area is Washington D.C., at 33%.
+- Washington D.C.s low marriage rates are not accounted for by a younger profesisonal population, as I initially speculated. Puerto Rico actually has the lowest marriage rate until age 34, when D.C. takes the lead. This trend is true for both males and females.
+- The most widowed state is New Mexico, by a long shot, recording a rate of 0.8%. This is driven by a high rate of female widows - 0.5%. It's not entirely an elderly population that accounts for this either; widows from age 20-34 account for a whopping 4.3% of New Mexican widows.
+- The most divorced state is Arkansas, at 5.1%, while the least divorced region is D.C., probably because nobody gets married there in the first place.
+- The most divorced state for whites is Montana, at 12.1%, while the least divorced for whites is its neighbor North Dakota, at only 1.3%. American Indians also have a right rate of divorce in Montana, at 19.1%. The most married state for whites is Hawaii, at 50.5%.
+- For blacks, the most divorced state is Illinois, at 16.7%. The most married state is Alabama, at 49%, followed closely by Louisiana, at 48.5%. 
+- The most separated state is Oklahoma at 3.6%. Most of the south and lower midwest has higher relatively higher separation rates and relatively lower divorce rates, possibly indicating an aversion to divorce. New York, however, has a separation rate nearly twice its (low) divorce rate.
+- The most never married region was the District of Columbia, at a whopping 39.3%. Nothing comes close. Mirroring the marriage rates, the least never-married state was Utah, at only 9.9%. The lowest never-married states for whites was Mississippi, at 28.9% while for blacks it was North Dakota, at 33.3%. Surprisingly, North Dakota is adjacent to one of the most least-married states for blacks - Minnesota, at nearly 60%.
 
 # What's Next
 

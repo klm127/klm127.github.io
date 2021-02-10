@@ -3,7 +3,7 @@
 <node TEXT="Quaffingcode.com layout" FOLDED="false" ID="ID_1638468080" CREATED="1612660369392" MODIFIED="1612660419267" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle" background="#333333">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -115,7 +115,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 <font BOLD="false"/>
 </node>
@@ -142,7 +141,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -236,11 +234,11 @@
 <edge COLOR="#00ffff"/>
 <node TEXT="Freeplane Post" LOCALIZED_STYLE_REF="defaultstyle.note" ID="ID_1817745923" CREATED="1612661816270" MODIFIED="1612661819470"/>
 <node TEXT="Freeplane tips" LOCALIZED_STYLE_REF="defaultstyle.note" ID="ID_1418119124" CREATED="1612661881908" MODIFIED="1612661883966">
-<node TEXT="Setup" ID="ID_853202895" CREATED="1612663299987" MODIFIED="1612663302779">
+<node TEXT="Setup" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_853202895" CREATED="1612663299987" MODIFIED="1612839912636">
 <node TEXT="styles ctrl+f11. I&apos;m going to mention this several times" ID="ID_217175330" CREATED="1612663303025" MODIFIED="1612663311968"/>
 <node TEXT="your view should center on what you are looking at. You have to change this in the settings. Press tools &gt; Preferences or ctrl+,. (Not a shortcut I memorized, by the way)" ID="ID_535129243" CREATED="1612663312171" MODIFIED="1612663371096"/>
 </node>
-<node TEXT="Organize" ID="ID_684767089" CREATED="1612661940086" MODIFIED="1612661941957">
+<node TEXT="Organize" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_684767089" CREATED="1612661940086" MODIFIED="1612839913056">
 <node TEXT="Flexible organization" ID="ID_1714958458" CREATED="1612661942717" MODIFIED="1612661953328"/>
 <node TEXT="You&apos;re not stuck on putting something somewhere - you can use links" ID="ID_249250775" CREATED="1612661953504" MODIFIED="1612661961172"/>
 <node TEXT="Example - mindmap for this site has site components and idas sections" ID="ID_215259776" CREATED="1612661961516" MODIFIED="1612661991343"/>
@@ -250,9 +248,9 @@
 <node TEXT="when i have an example of some code, I copy it in" ID="ID_722126462" CREATED="1612662034115" MODIFIED="1612662041941"/>
 <node TEXT="I use styles mapped to the function buttons" ID="ID_419110762" CREATED="1612662042201" MODIFIED="1612662057983"/>
 </node>
-<node TEXT="Best keyboard shortcuts" ID="ID_213830130" CREATED="1612662109723" MODIFIED="1612662113663">
+<node TEXT="Best keyboard shortcuts" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_213830130" CREATED="1612662109723" MODIFIED="1612839913426">
 <node TEXT="2 categories: styling, and navigation" ID="ID_1508072208" CREATED="1612662962257" MODIFIED="1612662987704"/>
-<node TEXT="styling" LOCALIZED_STYLE_REF="AutomaticLayout.level,2" ID="ID_1123726255" CREATED="1612662988420" MODIFIED="1612662990094">
+<node TEXT="styling" LOCALIZED_STYLE_REF="AutomaticLayout.level,2" FOLDED="true" ID="ID_1123726255" CREATED="1612662988420" MODIFIED="1612662990094">
 <node TEXT="Ctrl+f11 - bring up styling menu" ID="ID_98714900" CREATED="1612662933663" MODIFIED="1612662940397"/>
 <node TEXT="Ctrl+shift+c and ctrl+shift+v - copy all node styles from one node to another (including one on the style menu)" ID="ID_1311479227" CREATED="1612662941179" MODIFIED="1612662958224"/>
 <node TEXT="1.) The ones you map yourself to styling, f11 on the keyboard" ID="ID_1111534963" CREATED="1612662114291" MODIFIED="1612662123850"/>
@@ -277,7 +275,7 @@
 <node TEXT="Use highlighting single words when you have a group of list items together to highlight one concept" ID="ID_199360486" CREATED="1612662373011" MODIFIED="1612662386558"/>
 <node TEXT="3) Alt+n - input note information that will show when your mouse hovers over them" ID="ID_439300626" CREATED="1612662745856" MODIFIED="1612662767602"/>
 </node>
-<node TEXT="navigation" LOCALIZED_STYLE_REF="AutomaticLayout.level,2" ID="ID_230029349" CREATED="1612663002051" MODIFIED="1612663003480">
+<node TEXT="navigation" LOCALIZED_STYLE_REF="AutomaticLayout.level,2" FOLDED="true" ID="ID_230029349" CREATED="1612663002051" MODIFIED="1612663003480">
 <node TEXT="f2 opens node for writing, just like excel" ID="ID_1936252933" CREATED="1612663004045" MODIFIED="1612663013744"/>
 <node TEXT="Spacebar closes node" ID="ID_257382753" CREATED="1612663039088" MODIFIED="1612663042024"/>
 <node TEXT="ctrl up and down moves it up or down" ID="ID_389486782" CREATED="1612663015116" MODIFIED="1612663019785"/>
@@ -290,32 +288,42 @@
 <node TEXT="ctrl to move a node back a level" ID="ID_1962872616" CREATED="1612663112821" MODIFIED="1612663128755"/>
 </node>
 </node>
-<node TEXT="Use math" ID="ID_1265585903" CREATED="1612663421665" MODIFIED="1612663423685">
+<node TEXT="Use math" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1265585903" CREATED="1612663421665" MODIFIED="1612839913855">
 <node TEXT="It&apos;s latex, learn latex" ID="ID_125493525" CREATED="1612663424969" MODIFIED="1612663427810"/>
 <node TEXT="This is great for math programs" ID="ID_1730443937" CREATED="1612663427972" MODIFIED="1612663431889"/>
 <node TEXT="" ID="ID_529649064" CREATED="1612663432122" MODIFIED="1612663432124"/>
 </node>
-<node TEXT="Styling" ID="ID_1553483806" CREATED="1612662857600" MODIFIED="1612662859012">
+<node TEXT="Styling" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1553483806" CREATED="1612662857600" MODIFIED="1612839914395">
 <node TEXT="Big Text for First nodes" ID="ID_965631530" CREATED="1612662859515" MODIFIED="1612662865209"/>
 <node TEXT="Medium texts for larget sub-topic nodes" ID="ID_628092639" CREATED="1612662865420" MODIFIED="1612662872684"/>
 <node TEXT="Sub-topic nodes get a bubble so everything is contained in them" ID="ID_699668764" CREATED="1612662872874" MODIFIED="1612662881453"/>
 <node TEXT="Topic nodes same size or slightly larger than the normal text you use but with a solid and bold background, and possibly extra widht" ID="ID_1558436171" CREATED="1612662881660" MODIFIED="1612662908592"/>
 </node>
-<node TEXT="Stuff I don&apos;t do (yet)" ID="ID_648299243" CREATED="1612661915636" MODIFIED="1612661919747">
-<node TEXT="Menus" ID="ID_1632039159" CREATED="1612661900285" MODIFIED="1612661902591">
+<node TEXT="Stuff I don&apos;t do (yet)" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_648299243" CREATED="1612661915636" MODIFIED="1612839914992">
+<node TEXT="Menus" FOLDED="true" ID="ID_1632039159" CREATED="1612661900285" MODIFIED="1612661902591">
 <node TEXT="You can change these in the XML file" ID="ID_803188283" CREATED="1612661903091" MODIFIED="1612661907462"/>
 </node>
 <node TEXT="icons. could be mapped to a hotkey though and be powerful for certain people." ID="ID_204696904" CREATED="1612662768650" MODIFIED="1612662783907"/>
-<node TEXT="Exporting" ID="ID_339372437" CREATED="1612663640170" MODIFIED="1612663642548">
+<node TEXT="Exporting" FOLDED="true" ID="ID_339372437" CREATED="1612663640170" MODIFIED="1612663642548">
 <node TEXT="You can export as HTML" ID="ID_1181388581" CREATED="1612663643016" MODIFIED="1612663646390"/>
 <node TEXT="but this isn&apos;t great" ID="ID_1232875016" CREATED="1612663646564" MODIFIED="1612663661463"/>
 <node TEXT="gives you lists and spans that make the lists drop down like your dids did, and it could be useful, but you don&apos;t get the same cool map-node style as you do in freeplane" ID="ID_1570880604" CREATED="1612663661618" MODIFIED="1612663717787"/>
 <node TEXT="still, i&apos;m tempted to write a blog post entirely in Freeplane and export it." ID="ID_1338754590" CREATED="1612663720090" MODIFIED="1612663730445"/>
 </node>
 </node>
-<node TEXT="future stuff and ideas" ID="ID_455781231" CREATED="1612662059197" MODIFIED="1612662068994">
+<node TEXT="future stuff and ideas" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_455781231" CREATED="1612662059197" MODIFIED="1612839915584">
 <node TEXT="there should be a way to put freeplane styled nodes into an html page as collapsible divs" ID="ID_1647100305" CREATED="1612662061413" MODIFIED="1612662082013"/>
 <node TEXT="Mindmap-To-Webpage" ID="ID_1122017339" CREATED="1612662091962" MODIFIED="1612662095307"/>
+</node>
+<node TEXT="video" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_516956677" CREATED="1612838826970" MODIFIED="1612839916129">
+<node TEXT="Panopto Express" ID="ID_544342292" CREATED="1612838867730" MODIFIED="1612838871414"/>
+<node TEXT="OBS Studio - Open Source" ID="ID_1455413073" CREATED="1612838949462" MODIFIED="1612838955622"/>
+<node TEXT="Cam Studio" FOLDED="true" ID="ID_1420514311" CREATED="1612838991720" MODIFIED="1612838993421">
+<node TEXT="gives you freedom to set full screen, window, or fixed region as target area" ID="ID_197433698" CREATED="1612838994200" MODIFIED="1612839004867"/>
+<node TEXT="Annotation tool can add captions or other effects" ID="ID_1391551473" CREATED="1612839007065" MODIFIED="1612839013556"/>
+<node TEXT="Produces .SWFs" ID="ID_627982208" CREATED="1612839027710" MODIFIED="1612839030682"/>
+<node TEXT="Not too complex" ID="ID_964675351" CREATED="1612839030882" MODIFIED="1612839033369"/>
+</node>
 </node>
 </node>
 </node>
