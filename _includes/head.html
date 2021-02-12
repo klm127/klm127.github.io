@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="{{ "/assets/css/alternate/dark1.css" | relative_url }}">
   <link rel="canonical" href="{{ site.url }}{{site.baseurl}}{{ page.url }}" />
   {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' -%}
+  {%- if jekyll.environment == 'development' -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
   {% include external-scripts.html %}

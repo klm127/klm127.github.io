@@ -31,7 +31,7 @@ github_username:  klm127
 theme: minima
 plugins:
   - jekyll-feed
-google_analytics: G-D3L3R4XK4G
+google-analytics: G-D3L3R4XK4G
 favicon: potion32x32.png
 exclude: 
   - _notes-no-publish/
