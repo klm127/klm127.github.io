@@ -3,7 +3,7 @@
 <node TEXT="Quaffingcode.com layout" FOLDED="false" ID="ID_1638468080" CREATED="1612660369392" MODIFIED="1612660419267" STYLE="oval">
 <font SIZE="18"/>
 <hook NAME="MapStyle" background="#333333">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" show_note_icons="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -32,7 +32,7 @@
 </stylenode>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right" STYLE="bubble">
-<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#ccccff" BACKGROUND_COLOR="#000000" STYLE="fork">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#ccccff" BACKGROUND_COLOR="#000000" STYLE="fork" MIN_WIDTH="0.0 cm">
 <font NAME="Liberation Sans" SIZE="20" BOLD="true"/>
 </stylenode>
 <stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#ffffff" BACKGROUND_COLOR="#006666" STYLE="fork">
@@ -93,6 +93,9 @@
 </node>
 <node TEXT="google-analytics" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_1756392353" CREATED="1612660922127" MODIFIED="1612660924728" BACKGROUND_COLOR="#000066">
 <node TEXT="creates google analytics" ID="ID_1654515806" CREATED="1612661148047" MODIFIED="1612661151780"/>
+<node TEXT="some issues with this. Difficult to hard code google ID in because Jekyll function appeared dated. Wanted to keep Jekyll privacy protection function - it did look like Jekyll was the only thing causing GA to respect readers browser privacy settings. Did wind up keeping that function but need to test if GA respects that on its own. Better to force it than have it done in the remote script." ID="ID_606759067" CREATED="1613187389214" MODIFIED="1613187571118">
+<node TEXT="but was this a good idea? I&apos;m not sure" ID="ID_1461391119" CREATED="1613187575139" MODIFIED="1613187580516"/>
+</node>
 </node>
 <node TEXT="head" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_945923756" CREATED="1612660927675" MODIFIED="1612660928783" BACKGROUND_COLOR="#000066">
 <node TEXT="meta props" ID="ID_1015982186" CREATED="1612661081067" MODIFIED="1612661083491"/>
@@ -217,6 +220,7 @@
 <node TEXT="hitstep_analytics" ID="ID_152900448" CREATED="1612661535700" MODIFIED="1612661538549"/>
 <node TEXT="favicon" ID="ID_167951691" CREATED="1612661538781" MODIFIED="1612661539997"/>
 <node TEXT="exclude" ID="ID_1939131133" CREATED="1612661544672" MODIFIED="1612661546320"/>
+<node TEXT="google_analytics" ID="ID_1180171121" CREATED="1613187380227" MODIFIED="1613187384479"/>
 </node>
 <node TEXT=".gitignore" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_1209663965" CREATED="1612660608362" MODIFIED="1612660643006"/>
 <node TEXT="404.html" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_889558479" CREATED="1612660610177" MODIFIED="1612660642771"/>
@@ -233,12 +237,12 @@
 <node TEXT="Ideas" LOCALIZED_STYLE_REF="styles.topic" POSITION="right" ID="ID_1424043053" CREATED="1612660513316" MODIFIED="1612660518005">
 <edge COLOR="#00ffff"/>
 <node TEXT="Freeplane Post" LOCALIZED_STYLE_REF="defaultstyle.note" ID="ID_1817745923" CREATED="1612661816270" MODIFIED="1612661819470"/>
-<node TEXT="Freeplane tips" LOCALIZED_STYLE_REF="defaultstyle.note" ID="ID_1418119124" CREATED="1612661881908" MODIFIED="1612661883966">
+<node TEXT="Freeplane tips" LOCALIZED_STYLE_REF="defaultstyle.floating" ID="ID_1418119124" CREATED="1612661881908" MODIFIED="1613099014609">
 <node TEXT="Setup" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_853202895" CREATED="1612663299987" MODIFIED="1612839912636">
 <node TEXT="styles ctrl+f11. I&apos;m going to mention this several times" ID="ID_217175330" CREATED="1612663303025" MODIFIED="1612663311968"/>
 <node TEXT="your view should center on what you are looking at. You have to change this in the settings. Press tools &gt; Preferences or ctrl+,. (Not a shortcut I memorized, by the way)" ID="ID_535129243" CREATED="1612663312171" MODIFIED="1612663371096"/>
 </node>
-<node TEXT="Organize" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_684767089" CREATED="1612661940086" MODIFIED="1612839913056">
+<node TEXT="Organize" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_684767089" CREATED="1612661940086" MODIFIED="1612839913056">
 <node TEXT="Flexible organization" ID="ID_1714958458" CREATED="1612661942717" MODIFIED="1612661953328"/>
 <node TEXT="You&apos;re not stuck on putting something somewhere - you can use links" ID="ID_249250775" CREATED="1612661953504" MODIFIED="1612661961172"/>
 <node TEXT="Example - mindmap for this site has site components and idas sections" ID="ID_215259776" CREATED="1612661961516" MODIFIED="1612661991343"/>
@@ -248,7 +252,7 @@
 <node TEXT="when i have an example of some code, I copy it in" ID="ID_722126462" CREATED="1612662034115" MODIFIED="1612662041941"/>
 <node TEXT="I use styles mapped to the function buttons" ID="ID_419110762" CREATED="1612662042201" MODIFIED="1612662057983"/>
 </node>
-<node TEXT="Best keyboard shortcuts" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_213830130" CREATED="1612662109723" MODIFIED="1612839913426">
+<node TEXT="Best keyboard shortcuts" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_213830130" CREATED="1612662109723" MODIFIED="1612839913426">
 <node TEXT="2 categories: styling, and navigation" ID="ID_1508072208" CREATED="1612662962257" MODIFIED="1612662987704"/>
 <node TEXT="styling" LOCALIZED_STYLE_REF="AutomaticLayout.level,2" FOLDED="true" ID="ID_1123726255" CREATED="1612662988420" MODIFIED="1612662990094">
 <node TEXT="Ctrl+f11 - bring up styling menu" ID="ID_98714900" CREATED="1612662933663" MODIFIED="1612662940397"/>
@@ -288,18 +292,18 @@
 <node TEXT="ctrl to move a node back a level" ID="ID_1962872616" CREATED="1612663112821" MODIFIED="1612663128755"/>
 </node>
 </node>
-<node TEXT="Use math" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1265585903" CREATED="1612663421665" MODIFIED="1612839913855">
+<node TEXT="Use math" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_1265585903" CREATED="1612663421665" MODIFIED="1612839913855">
 <node TEXT="It&apos;s latex, learn latex" ID="ID_125493525" CREATED="1612663424969" MODIFIED="1612663427810"/>
 <node TEXT="This is great for math programs" ID="ID_1730443937" CREATED="1612663427972" MODIFIED="1612663431889"/>
 <node TEXT="" ID="ID_529649064" CREATED="1612663432122" MODIFIED="1612663432124"/>
 </node>
-<node TEXT="Styling" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1553483806" CREATED="1612662857600" MODIFIED="1612839914395">
+<node TEXT="Styling" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_1553483806" CREATED="1612662857600" MODIFIED="1612839914395">
 <node TEXT="Big Text for First nodes" ID="ID_965631530" CREATED="1612662859515" MODIFIED="1612662865209"/>
 <node TEXT="Medium texts for larget sub-topic nodes" ID="ID_628092639" CREATED="1612662865420" MODIFIED="1612662872684"/>
 <node TEXT="Sub-topic nodes get a bubble so everything is contained in them" ID="ID_699668764" CREATED="1612662872874" MODIFIED="1612662881453"/>
 <node TEXT="Topic nodes same size or slightly larger than the normal text you use but with a solid and bold background, and possibly extra widht" ID="ID_1558436171" CREATED="1612662881660" MODIFIED="1612662908592"/>
 </node>
-<node TEXT="Stuff I don&apos;t do (yet)" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_648299243" CREATED="1612661915636" MODIFIED="1612839914992">
+<node TEXT="Stuff I don&apos;t do (yet)" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_648299243" CREATED="1612661915636" MODIFIED="1612839914992">
 <node TEXT="Menus" FOLDED="true" ID="ID_1632039159" CREATED="1612661900285" MODIFIED="1612661902591">
 <node TEXT="You can change these in the XML file" ID="ID_803188283" CREATED="1612661903091" MODIFIED="1612661907462"/>
 </node>
@@ -311,20 +315,161 @@
 <node TEXT="still, i&apos;m tempted to write a blog post entirely in Freeplane and export it." ID="ID_1338754590" CREATED="1612663720090" MODIFIED="1612663730445"/>
 </node>
 </node>
-<node TEXT="future stuff and ideas" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_455781231" CREATED="1612662059197" MODIFIED="1612839915584">
+<node TEXT="future stuff and ideas" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_455781231" CREATED="1612662059197" MODIFIED="1612839915584">
 <node TEXT="there should be a way to put freeplane styled nodes into an html page as collapsible divs" ID="ID_1647100305" CREATED="1612662061413" MODIFIED="1612662082013"/>
 <node TEXT="Mindmap-To-Webpage" ID="ID_1122017339" CREATED="1612662091962" MODIFIED="1612662095307"/>
 </node>
-<node TEXT="video" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_516956677" CREATED="1612838826970" MODIFIED="1612839916129">
-<node TEXT="Panopto Express" ID="ID_544342292" CREATED="1612838867730" MODIFIED="1612838871414"/>
+<node TEXT="video" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_516956677" CREATED="1612838826970" MODIFIED="1613098651410" BACKGROUND_COLOR="#990099">
+<font SIZE="20"/>
+<node TEXT="keyPose - key presses" ID="ID_1579058033" CREATED="1613098686813" MODIFIED="1613098689931"/>
+<node TEXT="OpenShot Video Editor - Screen Record" ID="ID_1699796017" CREATED="1613098674095" MODIFIED="1613098679827"/>
 <node TEXT="OBS Studio - Open Source" ID="ID_1455413073" CREATED="1612838949462" MODIFIED="1612838955622"/>
-<node TEXT="Cam Studio" FOLDED="true" ID="ID_1420514311" CREATED="1612838991720" MODIFIED="1612838993421">
-<node TEXT="gives you freedom to set full screen, window, or fixed region as target area" ID="ID_197433698" CREATED="1612838994200" MODIFIED="1612839004867"/>
-<node TEXT="Annotation tool can add captions or other effects" ID="ID_1391551473" CREATED="1612839007065" MODIFIED="1612839013556"/>
-<node TEXT="Produces .SWFs" ID="ID_627982208" CREATED="1612839027710" MODIFIED="1612839030682"/>
-<node TEXT="Not too complex" ID="ID_964675351" CREATED="1612839030882" MODIFIED="1612839033369"/>
+<node TEXT="SCENES" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1095425217" CREATED="1613098638233" MODIFIED="1613099844086" BACKGROUND_COLOR="#0066cc">
+<font SIZE="20"/>
+<node TEXT="INTRO" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1162069543" CREATED="1613098640738" MODIFIED="1613098699181">
+<node TEXT="In this video, I will demonstrate how a first time user should set up Freeplane." ID="ID_818374202" CREATED="1613140745913" MODIFIED="1613140957315"/>
+<node TEXT="Freeplane has many, many features. You really don&apos;t need to know most them to make this program more than worth your time." ID="ID_207534644" CREATED="1613140995792" MODIFIED="1613141004243"/>
+<node TEXT="The features I will discuss are the most important ones that will make Freeplane pay huge dividends for the small investment of time learning it." ID="ID_1814941387" CREATED="1613141014167" MODIFIED="1613141045377"/>
+<node TEXT="I tried to design this video so it would be easy to follow along with it." ID="ID_392722554" CREATED="1613100136317" MODIFIED="1613100224989"/>
+<node TEXT="So if you&apos;d like, open up a new map in Freeplane and we can get started." ID="ID_1481318691" CREATED="1613100685600" MODIFIED="1613141078842"/>
+</node>
+<node TEXT="background" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_404367704" CREATED="1613099855030" MODIFIED="1613099858275">
+<node TEXT="First off, right click on the background of your mind map." ID="ID_786557800" CREATED="1613100156642" MODIFIED="1613100165766"/>
+<node TEXT="Starting off, the first thing you should do is set the background to black, for a night mode theme. I didn&apos;t use this much when I started making mindmaps, but now I think it&apos;s one of the most critical things." ID="ID_112148105" CREATED="1613099858730" MODIFIED="1613100199633"/>
+<node TEXT="I notice a big difference in endurance with how long I can comfortably stare at a dark screen instead of a white one." ID="ID_1678029878" CREATED="1613099895228" MODIFIED="1613099912080"/>
+</node>
+<node TEXT="Quick Style The Root" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_964734537" CREATED="1613099918039" MODIFIED="1613099928828">
+<node TEXT="Title your root" ID="ID_168503997" CREATED="1613099929407" MODIFIED="1613099942085"/>
+<node TEXT="Press ctrl+shift+plus to increase font size" ID="ID_1568841775" CREATED="1613099961802" MODIFIED="1613099970718"/>
+<node TEXT="Press alt+shift+b to change the background color of your font" ID="ID_1383975581" CREATED="1613099971029" MODIFIED="1613099982744"/>
+<node TEXT="Now, press alt+shift+f to change the color of your font." ID="ID_777071505" CREATED="1613099990674" MODIFIED="1613099999061"/>
+</node>
+<node TEXT="Save" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1512122921" CREATED="1613100006616" MODIFIED="1613100007623">
+<node TEXT="It&apos;s the same name as your root." ID="ID_1294888477" CREATED="1613100007958" MODIFIED="1613100033309"/>
+</node>
+<node TEXT="Add Nodes" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_333960197" CREATED="1613100034301" MODIFIED="1613100039537">
+<node TEXT="Press INSERT to add a node" ID="ID_1261675127" CREATED="1613100039848" MODIFIED="1613100077110"/>
+<node TEXT="Title this &quot;Hotkeys&quot;" ID="ID_734552203" CREATED="1613100077844" MODIFIED="1613100253110"/>
+<node TEXT="Press Alt+Shift+B to choose a background color" ID="ID_573043502" CREATED="1613100307655" MODIFIED="1613100322283"/>
+<node TEXT="Press Alt+Shift+F to choose a foreground color that will look good with the background color" ID="ID_677366313" CREATED="1613100324095" MODIFIED="1613100338385"/>
+<node TEXT="Press Ctrl+Shift+plus to size the node up slightly" ID="ID_145523945" CREATED="1613100354805" MODIFIED="1613100380300"/>
+</node>
+<node TEXT="Topic" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1590300703" CREATED="1613100422028" MODIFIED="1613100425366">
+<node TEXT="This node will be our &quot;topic&quot; style" ID="ID_1019006898" CREATED="1613100426360" MODIFIED="1613100432780"/>
+<node ID="ID_524587849" CREATED="1613100433033" MODIFIED="1613100444919"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If you press enter, you can create a new node of the <b>same </b>style
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="Press Alt+Shift+C to copy the style of this node" ID="ID_378695710" CREATED="1613100445571" MODIFIED="1613100467394"/>
+</node>
+<node TEXT="Styles Menu" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1130664996" CREATED="1613100477841" MODIFIED="1613100486082">
+<node TEXT="Press Ctrl+F11 to bring up the styles menu" ID="ID_1481608723" CREATED="1613100486893" MODIFIED="1613100500714"/>
+<node TEXT="The Styles menu works like a funky version of Freeplane." ID="ID_1696388077" CREATED="1613100501021" MODIFIED="1613100510528"/>
+<node TEXT="You style the nodes in there how you want them to be styled." ID="ID_609544874" CREATED="1613100510717" MODIFIED="1613100518378"/>
+<node TEXT="There are MORE options in there than in the editor." ID="ID_75198549" CREATED="1613100518555" MODIFIED="1613100524226"/>
+</node>
+<node TEXT="Make the Topic Style" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1628427831" CREATED="1613100527903" MODIFIED="1613100531439">
+<node TEXT="Go down to topic. Press Alt+Shift+V to apply the style already copied with Alt+Shift+C" LOCALIZED_STYLE_REF="default" ID="ID_1925498813" CREATED="1613100531951" MODIFIED="1613101593700"/>
+</node>
+<node TEXT="Style Subtopic" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1448750642" CREATED="1613101598115" MODIFIED="1613101601060">
+<node TEXT="However you like it, just a little smaller than topic" ID="ID_1251554089" CREATED="1613101608146" MODIFIED="1613101617204"/>
+</node>
+<node TEXT="Style Default" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1341905376" CREATED="1613103011310" MODIFIED="1613103013111">
+<node TEXT="Set this to a font you like. I feel better writing maps in a coding type font. I like Source Code Pro lately." ID="ID_618726012" CREATED="1613101628446" MODIFIED="1613101651368"/>
+<node TEXT="I also used Sitka Text for a semester." ID="ID_1880274751" CREATED="1613101651570" MODIFIED="1613101673436"/>
+</node>
+<node TEXT="setting hotkeys" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_84997740" CREATED="1613099084736" MODIFIED="1613100247034">
+<node TEXT="The most important hotkeys are the style hotkeys." ID="ID_1609095593" CREATED="1613099419302" MODIFIED="1613100247031"/>
+<node TEXT="Set these to the function buttons, f3 and on." ID="ID_535179776" CREATED="1613099430160" MODIFIED="1613099436453"/>
+<node ID="ID_1138204557" CREATED="1613099333387" MODIFIED="1613099342571"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &nbsp;<i>run through table of contents</i>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node TEXT="To set a hotkey, first just try pressing the hotkey you want" ID="ID_1041114128" CREATED="1613103587364" MODIFIED="1613103626640"/>
+<node TEXT="If you haven&apos;t assigned it, you can assign it then." ID="ID_1646318881" CREATED="1613103595009" MODIFIED="1613103604476"/>
+<node TEXT="Press ctrl+h to assign the hotkey, then click the format &gt; apply style menu" ID="ID_1460861712" CREATED="1613099437738" MODIFIED="1613099467020"/>
+<node TEXT="I like to assign &quot;apply style &gt; topic&quot; to F5" ID="ID_38261213" CREATED="1613103393863" MODIFIED="1613103419572"/>
+<node TEXT="I like to assign &quot;apply style &gt; subtopic &quot; to F6" ID="ID_1053845063" CREATED="1613103419905" MODIFIED="1613103427788"/>
+<node TEXT="Now go back to the style menu with ctrl+f11" ID="ID_1382317326" CREATED="1613103428210" MODIFIED="1613103443230"/>
+</node>
+<node TEXT="Style Floating Node" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1839112400" CREATED="1613103024231" MODIFIED="1613103037877">
+<node TEXT="This is going to be your example node" ID="ID_985551563" CREATED="1613103038136" MODIFIED="1613103120218"/>
+<node TEXT="There are two ways to go with this, depending on your map" ID="ID_63981826" CREATED="1613103120387" MODIFIED="1613103127951"/>
+<node TEXT="You either want it to look like source code or like math" ID="ID_1523021975" CREATED="1613103128114" MODIFIED="1613103144181"/>
+<node TEXT="Let&apos;s make this like source code" ID="ID_870859682" CREATED="1613103144374" MODIFIED="1613103149341"/>
+<node TEXT="Pick a font like Source Code Pro or Consolas" ID="ID_406455065" CREATED="1613103149504" MODIFIED="1613103154992"/>
+<node TEXT="Dark background, source codey font" ID="ID_1594085265" CREATED="1613103155253" MODIFIED="1613103298597"/>
+<node TEXT="Freeplane does not yet have automatic code syntax highlighting that I have found, but I may try to create that addon in the future." ID="ID_1671546678" CREATED="1613103298764" MODIFIED="1613103318878"/>
+<node TEXT="Freeplane is written in Java and Groovy and addons and scripts can be programmed with Groovy. It&apos;s not insanely hard." ID="ID_1030104248" CREATED="1613103319057" MODIFIED="1613103335417"/>
+</node>
+<node TEXT="Style subsubtopic Node" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1194531312" CREATED="1613103478110" MODIFIED="1613103683552">
+<node TEXT="That way the math is all aligned" ID="ID_957907295" CREATED="1613103513642" MODIFIED="1613103521798"/>
+<node TEXT="I&apos;d probably do it that way for code too." ID="ID_641520930" CREATED="1613103521962" MODIFIED="1613103527499"/>
+<node TEXT="I make this relatively close to the text in style" ID="ID_1497116164" CREATED="1613103687081" MODIFIED="1613103712701"/>
+</node>
+<node TEXT="Assign subtopic node and floating node to hotkeys" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_266655862" CREATED="1613103715439" MODIFIED="1613103723155">
+<node TEXT="subtopic node is set to f7" ID="ID_88108247" CREATED="1613103744438" MODIFIED="1613103793550"/>
+<node TEXT="floating node is set to f4" ID="ID_960582204" CREATED="1613103753875" MODIFIED="1613103794456"/>
+</node>
+<node TEXT="Style Link" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1475823806" CREATED="1613103449299" MODIFIED="1613103451701">
+<node TEXT="This is easy, white background with blue text. Underline if you&apos;d like. This will be for hyperlinks." ID="ID_227703936" CREATED="1613103452164" MODIFIED="1613103467208"/>
+</node>
+<node TEXT="Assign" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_541453969" CREATED="1613103807994" MODIFIED="1613103809609">
+<node TEXT="Assign to f3" ID="ID_921856648" CREATED="1613103810183" MODIFIED="1613103814115"/>
+</node>
+<node TEXT="Try moving around and typing these hotkeys in" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_1458738738" CREATED="1613103888865" MODIFIED="1613103901522">
+<node TEXT="move over with arrow" ID="ID_545317168" CREATED="1613103902043" MODIFIED="1613103907163"/>
+<node TEXT="go through hotkeys" ID="ID_780689981" CREATED="1613103909591" MODIFIED="1613103919016"/>
+</node>
+<node TEXT="design patterns" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_215754014" CREATED="1613100714490" MODIFIED="1613100718482">
+<node TEXT="Link in each subtopic" ID="ID_956602899" CREATED="1613100727266" MODIFIED="1613100734556"/>
+<node TEXT="A node full of links" ID="ID_1385118916" CREATED="1613100736258" MODIFIED="1613100740368"/>
+<node TEXT="Both" ID="ID_1992799400" CREATED="1613100740554" MODIFIED="1613100742161"/>
+<node TEXT="Linking Nodes" ID="ID_1893530300" CREATED="1613100742332" MODIFIED="1613100749062"/>
+<node TEXT="Attributes" ID="ID_1233583359" CREATED="1613100761198" MODIFIED="1613100762741"/>
+<node TEXT="A master map of other maps" ID="ID_476594355" CREATED="1613103934746" MODIFIED="1613103938439"/>
+</node>
+<node TEXT="links" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_1093904596" CREATED="1613099249895" MODIFIED="1613099252111"/>
+<node TEXT="filters" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_501553022" CREATED="1613099252674" MODIFIED="1613099635628">
+<node TEXT="ctrl+t, ctrl+f" ID="ID_1865127043" CREATED="1613099636082" MODIFIED="1613099639054"/>
+</node>
+<node TEXT="example of angular map?" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_474367366" CREATED="1613099826862" MODIFIED="1613099830188"/>
+<node TEXT="cut scenes" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_423572508" CREATED="1613099831277" MODIFIED="1613099839427" BACKGROUND_COLOR="#cc0000">
+<node TEXT="filters at 13:15?" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_400891828" CREATED="1613192918549" MODIFIED="1613192926337"/>
+</node>
+<node TEXT="F11 Style Menu" LOCALIZED_STYLE_REF="styles.subtopic" ID="ID_96823926" CREATED="1613098706859" MODIFIED="1613099091041"/>
+<node TEXT="recuts" LOCALIZED_STYLE_REF="styles.subtopic" FOLDED="true" ID="ID_103180654" CREATED="1613193727763" MODIFIED="1613193733013" BACKGROUND_COLOR="#ff0000">
+<node TEXT="redo link to link to quaffing code.com" ID="ID_311345515" CREATED="1613193734002" MODIFIED="1613193739360"/>
+<node TEXT="jekyll-ruby-teaser montage at end of map" ID="ID_138811998" CREATED="1613193863877" MODIFIED="1613193871701"/>
 </node>
 </node>
+<node TEXT="project directory" LOCALIZED_STYLE_REF="AutomaticLayout.level,1" ID="ID_95620565" CREATED="1613099077037" MODIFIED="1613099617821" LINK="../../../../Videos/2-11%20FreeplaneTips/" BACKGROUND_COLOR="#ff3366">
+<font SIZE="7"/>
+</node>
+</node>
+</node>
+<node TEXT="Learning Stack" LOCALIZED_STYLE_REF="defaultstyle.note" ID="ID_234908144" CREATED="1613098386792" MODIFIED="1613098389241">
+<node TEXT="Todo list" ID="ID_868958746" CREATED="1613098414872" MODIFIED="1613098423335"/>
 </node>
 </node>
 </node>
