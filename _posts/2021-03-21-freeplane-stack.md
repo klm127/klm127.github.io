@@ -15,7 +15,7 @@ I have since switched to [FreePlane](https://www.freeplane.org/wiki/index.php/Ho
 # Table of Contents
  - [Why Mindmapping is Great](#why-mindmapping-is-great)
  - [Why Freeplane is Great](#why-freeplane-is-great)
- - [6 Steps to Maximize Freeplane(#6-steps-to-maximize-freeplane)
+ - [6 Steps to Maximize Freeplane](#6-steps-to-maximize-freeplane)
  - [Youtube Example](#youtube-example)
  - [Limitations](#limitations-of-freeplane)
  - [Other Programs](#other-programs)
