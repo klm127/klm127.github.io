@@ -12,6 +12,19 @@ When I found Freemind, a piece of Open Source Software developed by Christian Fo
 
 I have since switched to [FreePlane](https://www.freeplane.org/wiki/index.php/Home), a fork of [FreeMind](https://sourceforge.net/projects/freemind/), which is very similar but performs a little better, with a few more features, and is still being regularly updated.
 
+# Table of Contents
+ - [Why Mindmapping is Great](#why-mindmapping-is-great)
+ - [Why Freeplane is Great](#why-freeplane-is-great)
+ - [6 Steps to Maximize Freeplane(#6-steps-to-maximize-freeplane)
+ - [Youtube Example](#youtube-example)
+ - [Limitations](#limitations-of-freeplane)
+ - [Other Programs](#other-programs)
+ - [Conclusion](#conclusion)
+ - [Further Reading](#further-reading)
+ - [Credits](#credits)
+ - [Whats next](#whats-next)
+
+
 # Why Mindmapping is Great
 
 Digital Mindmaps compact vast quantities of learned material into a tree data structure. They are human-traversable and expansile. 
@@ -22,7 +35,7 @@ Moreover, because mindmaps organize information in a spatial way, I believe they
 
 The Method of Loci, also called a [Memory Palace](https://learnerfix.com/memory-palace-technique/), was explicated in _[Rhetorica ad Herennium](https://en.wikipedia.org/wiki/Rhetorica_ad_Herennium)_, circa 80 B.C. This ancient book treated rhetoric, oration, and memoria, the memorization of speeches, and also happened to give us the five part essay.
 
-Roman orators gave [lengthy speeches](http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0021%3Aspeech%3D1%3Asection%3D1) entirely from memory. They did this by creating a palace in their mind's eye. As they memorized, they mentally strolled through this palace, attaching subjects of their speech to mental objects placed about. A bust of their favorite emperor reminded them of an anecdote portion of their speech. In the subsequent room, a charioted javalineer was constructed to represent the invasion of Britannia, the next subject of their speech. When they later delivered the speech, they mentally walked through these same rooms and remembered those same subjects. 
+Roman orators gave [lengthy speeches](http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0021%3Aspeech%3D1%3Asection%3D1) entirely from memory. They did this by creating a palace in their mind's eye. As they memorized, they mentally strolled through this palace, attaching subjects of their speech to metaphysical objects placed about. A bust of their favorite emperor reminded them of an anecdote portion of their speech. In the subsequent room, a charioted javalineer was constructed to represent the invasion of Britannia, the next subject of their speech. When they later delivered the speech, they mentally walked through these same rooms and remembered their subjects from the metaphysical objects they envisioned. 
 
 A fundamental principle of mnemonics, known by all memory masters, is that harnessing the senses form better memory links. [Incorporating images](https://artofmemory.com/wiki/Mnemonic_Association_System_for_Numbers), music, and tactile sensation sticks an idea better. But there is an extra sense that is often overlooked. The sense of direction.
 
@@ -30,7 +43,7 @@ We can catch balls behind our backs or kick-stop our dropped phones before they 
 
 The method of loci takes full advantage of the spatial sense; practitioners place memory anchors within a well known location they construct in their mind. To retrieve the memories, they mentally navigate this imagined space.
 
-Mindmapping also taps into spatial awareness. Though they can be quickly expanded, Nodes have distinct positions on the tree, and can be reached by traversing a particular path. There is a dimensional sense to the information, even if every node contains infinite space. I suggest that the act of creating a mindmap alone secures ideas better in memory than linear notes, even before those notes must be referenced.
+Digital Mindmapping also taps into spatial awareness. Though they can be quickly expanded, Nodes have distinct positions on the tree, and can be reached by traversing a particular path. There is a dimensional sense to the information, even if every node contains infinite space. I suggest that the act of creating a mindmap alone secures ideas better in memory than linear notes, even before those notes must be referenced.
 
 All together, mindmaps solve a big question most students must have. How do we mentally organize large amounts of knowledge? How do we not forget that whole branches of our trees even exist?
 
@@ -104,11 +117,15 @@ I'll assume you've downloaded Freeplane for free at [freeplane.org](https://www.
  - Press `Ctrl+H` to start a hotkey assignment
  - On the top menu, Click `Format>Apply Style>Topic` to select the menu command the hotkey will be assigned to
  - The hotkey menu will pop up. Press `F5`.
- - Now whenever you press `F5`, it will be styled just like the topic node in the Styles menu. If you change the Styles menu node, every topic node in your map will change. If you press ctrl+shift+o to copy/open the styles from another map, your topic nodes will change to that map's style of topic nodes.
+ - Now whenever you press `F5`, it will be styled just like the topic node in the Styles menu. If you change the Styles menu node, every topic node in your map will change. If you press `Ctrl+Shift+O` to copy/open the styles from another map, your topic nodes will change to that map's style of topic nodes.
 
 5. **Add links** to your mindmap.
  - `Ctrl+K` adds a hyperlink.
  - `Ctrl+Shift+K` creates a file system link. 
+
+# Youtube Example
+
+<iframe width="1064" height="599" src="https://www.youtube.com/embed/1oImN_zRuVM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Limitations of Freeplane
 
@@ -147,10 +164,6 @@ If you're a student, try mind mapping!
 # Credits
 
 Cicero Image by <a href="https://pixabay.com/users/dezalb-1045091/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2510287">DEZALB</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2510287">Pixabay</a>
-
-- Other images my screenshots
-
-- A screenshot cropped from a Pearson textbook in one of my notes
 
 # What's Next
 
