@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "FreePlane, the Cornerstone of My Learning Stack"
-date:   2021-02-14 18:00:00 -0500
+date:   2021-03-21 18:00:00 -0500
 categories: learning freeplane
 tags: learning freeplane
 permalink: "Freeplane-Mindmap-Tutorial"
@@ -30,7 +30,7 @@ We can catch balls behind our backs or kick-stop our dropped phones before they 
 
 The method of loci takes full advantage of the spatial sense; pratitioners place memory anchors within a well known location they construct in their mind. To retrieve the memories, they mentally navigate this imagined space.
 
-Mindmapping also taps into spatial awareness. Though they can be quickly expanded, Nodes have distinct positions on the tree, and can be accessed by traversing the same path. There is a dimensional sense to the information, even if every node has infinite space. I suggest that the act of creating a mindmap alone secures ideas better in memory than linear notes, even before those notes must be referenced.
+Mindmapping also taps into spatial awareness. Though they can be quickly expanded, Nodes have distinct positions on the tree, and can be reached by traversing a particular path. There is a dimensional sense to the information, even if every node contains infinite space. I suggest that the act of creating a mindmap alone secures ideas better in memory than linear notes, even before those notes must be referenced.
 
 All together, mindmaps solve a big question most students must have. How do we mentally organize large amounts of knowledge? How do we not forget that whole branches of our trees even exist?
 
@@ -119,33 +119,36 @@ Freeplane has a few limitations. Some of these could well be improved in future 
 1. **Exporting as an Image doesn't exit**: As far as I can tell, you can't just export a map as a super high resolution png. You could take screenshots and chop them together, but that's not efficient.
 1. **Searching isn't totally intuitive**: Unfortunately, there's no `Ctrl+F` to find. `Ctrl+F` will instead Filter to your currently selected node. (`Ctrl+T` clears the Filtering). You _can_ find nodes by applying a filter, but the filter menu is not very intuitive and needs improvement.
 
-# other programs
+# Other Programs
 
-- the js one, but costs money
-- another js one, has the bones there, judging from the example, but not fully implemented
-- freeplane is largely fully implemented but it keeps versioning with new releases. Small but dedicated community on sourceforge.
-- freemind, haven't checked it since i transitioned. Still active on sourceforge but no releases since 2016. Seems as though everything done in FM can be done in FP.
+There are some other programs out there that do what Freeplane does. I've found Freeplane so full-featured and powerful that I have no desire to switch to something that seemed more paired down. But I'll list them here:
 
+- [Xmind](https://www.xmind.net/) is popular.
+- [markmap](https://markmap.js.org/repl/) turns markdown into little mind maps, kind of fun.
+- [mindmup](https://www.mindmup.com/) is in browser, not really free. 
+- [mindmaster.io](https://www.mindmaster.io) is also in browser, also not free.
 
-# further reading
+There are others, but so far, I've found every alternative less visually pleasing than Freeplane, missing important features, or distracting with less useful features. However, someone else might feel differently and if you like one of these programs, more power to you!  
 
-- [polytree](https://en.wikipedia.org/wiki/Polytree)
+# Conclusion
+
+Freeplane has improved my learning experience dramatically, which is why I felt compelled to write this blog post. I hope some readers will decide to try this excellent software, and reap many rewards from it. Perhaps you will even contribute to its development.
+
+If you're a student, try mind mapping!
+
+# Further Reading
+
+- [tree data structure](https://en.wikipedia.org/wiki/Tree_(data_structure))
 - [memory palaces generally](https://learnerfix.com/memory-palace-technique/)
 - [drawn mind maps](https://mindmapsunleashed.com/10-really-cool-mind-mapping-examples-you-will-learn-from)
-
-- [hashtags in freeplane](https://sourceforge.net/p/freeplane/discussion/758437/thread/95dd1f3d41/) with full isntallation instructions
+- [memory wiki](https://artofmemory.com)
+- [hashtags in freeplane script](https://sourceforge.net/p/freeplane/discussion/758437/thread/95dd1f3d41/) with full installation instructions
 - [Freeplane hotkey Cheat Sheet](https://freeplane.sourceforge.io/doc/FP_Key_Mappings_Quick_Guide.pdf)
 
-# conclusion
-
-- great example of OSS doing it better
-
-
-
-# creds
+# Credits
 
 Cicero Image by <a href="https://pixabay.com/users/dezalb-1045091/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2510287">DEZALB</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2510287">Pixabay</a>
 
-Other images my screenshots
+- Other images my screenshots
 
-A screenshot cropped from a pearson textbook in one of my notes
+- A screenshot cropped from a pearson textbook in one of my notes
