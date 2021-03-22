@@ -32,6 +32,8 @@ I've completed the [Front End Libaries Certification on FreeCodeCamp.org](https:
 
 I take notes in [Freeplane](https://www.freeplane.org/wiki/index.php/Home), a mind-mapping software. I'll eventually make a post about how I maximize my usage of this powerful tool. It's easily my most-used application. Here's a screenshot from my FreeCodeCamp.org notes. I cannot stress enough how incredibly useful it is to efficiently reference back to what I've learned. 
 
+[Update: Now that post exists]({% post_url 2021-03-21-freeplane-stack %})
+
 ### My notes: .png export from Freeplane <span id="screen"></span>
 
 ![freeplane screenshot]({{site.url}}/assets/images/2021-01-24-FreePlane-PNG-export.png "screenshot of a freeplane mindmap")
@@ -182,12 +184,10 @@ These projects were excellent challenges, perfectly appropriate for my skill lev
 
 So out of all this code, the most satisfying for me was the very short include I wrote, `snippet-in-page.html`, described [here](#snippet-in-page-html). I'll definitely be re-using that to take full advantage of the Jekyll / Liquid setup and plug all sorts of little utilities around my page. Next up is likely going to be a "top" button, that takes you back to the start of whatever page you're on.
 
-I'm getting a _lot_ out of FreeCodeCamp. I'm going to keep going with it. Next up is the **Data Visualization Certification** which looks to be focused on [D3](https://d3js.org/). That's a lot more exciting to me than any of these front end libraries. 
+I'm getting a lot out of FreeCodeCamp. I'm going to keep going with it. Next up is the **Data Visualization Certification** which looks to be focused on [D3](https://d3js.org/). That's more exciting to me than React.
 
-Plus, FreeCodeCamp.org offers certifications that show up on your linkedin!
+Plus, FreeCodeCamp.org offers certifications that show up on your linkedin.
 
 ![FreeCodeCamp.org certification as it appears on LinkedIn]({{site.url}}/assets/images/fcc-front-end-certification.png "FreeCodeCamp certification on LinkedIn")
 
-That'll look nice with a Bachelor's Degree beside it! I'm looking forward to making a hefty donation to FCC, as soon as I'm employed.
-
-If you made it this far, I hope you enjoyed reading!
+That'll look nice with a Bachelor's Degree beside it. Maybe I'll make a hefty donation to FCC, as soon as I'm employed.

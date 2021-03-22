@@ -10,4 +10,4 @@ This page is to document my progress. It's purpose is to write about my coding a
 
 **interests**: learning, coding, reading, nature, homesteading, fitness, mindmapping, languages
 
-**languages**: javascript, Ruby, Java, Groovy, C#
+**languages**: javascript, python, Java, C#
