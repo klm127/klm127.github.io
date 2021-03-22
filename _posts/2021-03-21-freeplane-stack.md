@@ -3,8 +3,8 @@ layout: post
 title:  "FreePlane, the Cornerstone of My Learning Stack"
 date:   2021-03-21 18:00:00 -0500
 categories: learning freeplane
-tags: learning freeplane
-permalink: "Freeplane-Mindmap-Tutorial"
+tags: learning freeplane tools
+permalink: "Freeplane-Learning"
 todo: "Write This"
 ---
 
@@ -14,7 +14,7 @@ I have since switched to [FreePlane](https://www.freeplane.org/wiki/index.php/Ho
 
 # Why Mindmapping is Great
 
-Digital Mindmaps compact vast quantities of learned material into a tree data structure. They are human-traversible and expansile. 
+Digital Mindmaps compact vast quantities of learned material into a tree data structure. They are human-traversable and expansile. 
 
 Moreover, because mindmaps organize information in a spatial way, I believe they take advantage of a fundamental principle of memory, first described by the Romans. 
 
@@ -24,11 +24,11 @@ The Method of Loci, also called a [Memory Palace](https://learnerfix.com/memory-
 
 Roman orators gave [lengthy speeches](http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0021%3Aspeech%3D1%3Asection%3D1) entirely from memory. They did this by creating a palace in their mind's eye. As they memorized, they mentally strolled through this palace, attaching subjects of their speech to mental objects placed about. A bust of their favorite emperor reminded them of an anecdote portion of their speech. In the subsequent room, a charioted javalineer was constructed to represent the invasion of Britannia, the next subject of their speech. When they later delivered the speech, they mentally walked through these same rooms and remembered those same subjects. 
 
-A fundamental principle of mneumonics, known by all memory masters, is that harnessing the senses form better memory links. [Incorporating images](https://artofmemory.com/wiki/Mnemonic_Association_System_for_Numbers), music, and tactile sensation sticks an idea better. But there is an extra sense that is often overlooked. The sense of direction.
+A fundamental principle of mnemonics, known by all memory masters, is that harnessing the senses form better memory links. [Incorporating images](https://artofmemory.com/wiki/Mnemonic_Association_System_for_Numbers), music, and tactile sensation sticks an idea better. But there is an extra sense that is often overlooked. The sense of direction.
 
 We can catch balls behind our backs or kick-stop our dropped phones before they shatter, and a blind man can clean his apartment. Our spatial awareness is one of our most powerful senses. Perhaps the most important one.
 
-The method of loci takes full advantage of the spatial sense; pratitioners place memory anchors within a well known location they construct in their mind. To retrieve the memories, they mentally navigate this imagined space.
+The method of loci takes full advantage of the spatial sense; practitioners place memory anchors within a well known location they construct in their mind. To retrieve the memories, they mentally navigate this imagined space.
 
 Mindmapping also taps into spatial awareness. Though they can be quickly expanded, Nodes have distinct positions on the tree, and can be reached by traversing a particular path. There is a dimensional sense to the information, even if every node contains infinite space. I suggest that the act of creating a mindmap alone secures ideas better in memory than linear notes, even before those notes must be referenced.
 
@@ -59,7 +59,7 @@ The nested nature means as much involvement as you want.
 
 ![A screenshot of a Freeplane mindmap of notes about Jekyll and Ruby]({{site.baseurl}}/assets/images/2021-03-19-FreeplaneScreenshots/jekyll-ruby-notes.png "A screenshot of a Freeplane mindmap of notes about Jekyll and Ruby")
 
-With a digital mind map, huge swaths of the tree can be chopped and regrafted as needed. Muddy root stones can morph into cherry blossoms. Custom portals (`Alt+Shift+L`) can be inserted to move you from one end of the tree to the other. Touch another portal, and you'll vanish to another realm altogether. Brilliant red squirrels and thrushes can abound or not abound. It's a rapidly evolving arboreal freak, a cyber-genecists dream. Or it's a carefully pruned Bonzai, presenting information as beauty from every angle.
+With a digital mind map, huge swaths of the tree can be chopped and re-grafted as needed. Muddy root stones can morph into cherry blossoms. Custom portals (`Alt+Shift+L`) can be inserted to move you from one end of the tree to the other. Touch another portal, and you'll vanish to another realm altogether. Brilliant red squirrels and thrushes can abound or not abound. It's a rapidly evolving arboreal freak, a cyber-geneticist's dream. Or it's a carefully pruned Bonzai, presenting information as beauty from every angle.
 
 Physical mindmaps have their place, and there is value in also creating pencil-and-paper, real-world mindmaps. Besides mixing the pleasure of art with the pleasure of knowledge acquisition and self improvement, you are _physically_ traversing paper in a way that involves other parts of your body in memory formation. Solving the problems of placement on a limited area also forces the mapper into greater contemplation of each node, etching ideas more deeply into memory.
 
@@ -98,14 +98,13 @@ I'll assume you've downloaded Freeplane for free at [freeplane.org](https://www.
  - `Control+Shift+Plus` makes node font larger, `Control+Shift+Minus` makes it smaller
  - press `Alt+Shift+C` to copy the style of the topic node
  - press `Ctrl+F11` to bring up the Styles menu
- - select the style node there and press `Alt+Shift+V` to paste the style onto it
+ - select the style node there and press `Alt+Shift+V` to paste the style onto, for example, the `Topic` node.
 
 5. **Hotkey** your styles.
  - Press `Ctrl+H` to start a hotkey assignment
  - On the top menu, Click `Format>Apply Style>Topic` to select the menu command the hotkey will be assigned to
  - The hotkey menu will pop up. Press `F5`.
  - Now whenever you press `F5`, it will be styled just like the topic node in the Styles menu. If you change the Styles menu node, every topic node in your map will change. If you press ctrl+shift+o to copy/open the styles from another map, your topic nodes will change to that map's style of topic nodes.
- - Repeat for your subtopic node.
 
 5. **Add links** to your mindmap.
  - `Ctrl+K` adds a hyperlink.
@@ -113,7 +112,7 @@ I'll assume you've downloaded Freeplane for free at [freeplane.org](https://www.
 
 # Limitations of Freeplane
 
-Freeplane has a few limitations. Some of these could well be improved in future iterations as the open source sofware develops.
+Freeplane has a few limitations. Some of these could well be improved in future iterations as the open source software develops.
 
 1. **Exporting as HTML is all right**: Exporting as HTML gives you a webpage with drop down divs for each node. It's not completely awful, but it really doesn't capture the intricacy of a mind map. It would be great if Freeplane could export a map as an HTML page that emulates the entire map in all its tree-ness, but it just doesn't do that yet.
 1. **Exporting as an Image doesn't exit**: As far as I can tell, you can't just export a map as a super high resolution png. You could take screenshots and chop them together, but that's not efficient.
@@ -151,4 +150,12 @@ Cicero Image by <a href="https://pixabay.com/users/dezalb-1045091/?utm_source=li
 
 - Other images my screenshots
 
-- A screenshot cropped from a pearson textbook in one of my notes
+- A screenshot cropped from a Pearson textbook in one of my notes
+
+# What's Next
+
+School projects and student organizations. Maybe some posts about that soon.
+
+Mindmapping also deserves another post about different approaches to organizing a mind map and what stuff you can mind map. And there's a dozen more great hotkeys I haven't yet mentioned. One of these days.
+
+Thanks for reading!
