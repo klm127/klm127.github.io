@@ -5,7 +5,6 @@ date:   2021-03-21 18:00:00 -0500
 categories: learning freeplane
 tags: learning freeplane tools
 permalink: "Freeplane-Learning"
-todo: "Write This"
 ---
 
 When I found Freemind, a piece of Open Source Software developed by Christian Foltin, it was a game changer. My researching and notetaking capabilities went through the roof as I simultaneously discovered mind-mapping and one of the most powerful tools ever created for that purpose. Before that, I'd clumsily take notes in word documents, or just force memorize with flash cards. Now, Mind-maps are the number 1 tool I can credit with my efficient learning.
