@@ -2,8 +2,8 @@
 layout: post
 title:  "Experiments in Data Visualization - Choropleth"
 date:   2021-02-03 18:00:00 -0500
-categories: javascript data chloropleths visualization census
-tags: javascript data choropleth visualization census
+categories: javascript data chloropleths visualization census maps
+tags: javascript data choropleth visualization census maps
 permalink: "USCensus-Marital-Visualized"
 todo: "Replace links to github with links to documentation for keymodeler/map"
 external-js-dependencies:
