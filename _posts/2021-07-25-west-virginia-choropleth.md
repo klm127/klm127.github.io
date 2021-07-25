@@ -28,13 +28,13 @@ custom-css-list:
 
 ## What the data tells us
 
-Some of the most expensive areas of the state, such as Jefferson County and Monongalia County, also saw the highest percentage increases in home values. Jefferson jumped by a whopping 25%. Across the state, most counties went up quite a bit in home values, but some counties, such as the large Randolph County, apparently lost value. Overall, the gap between the highest-priced counties and the rest of the state has widened. 
+Some of the most expensive areas of the state, such as Jefferson County and Monongalia County, also saw the highest percentage increases in home values. Jefferson jumped by a whopping 25%. Across the state, most counties went up quite a bit in home value, but some counties, such as the large Randolph County, apparently lost value. Overall, the gap between the highest-priced counties and the rest of the state has widened. 
 
-The pricier counties tend to congregate on the eastern side of the state, probably because housing demand includes Maryland commuters.Generally, the more west and south one travels, the cheaper the homes, with the exception of Putnam County, adjacent to Kanawha county, with an average home value more than 100% higher than its neighbors. Kanawha county is home to the state's capital, Charleston, and I speculate that Putnam is home to some more hoity toity suburbs for top government workers and/or higher quality schools.
+The pricier counties tend to congregate on the eastern side of the state, probably because housing demand includes Maryland commuters. Generally, the more west and south one travels, the cheaper the homes, with the exception of Putnam County, adjacent to Kanawha county, with an average home value more than 100% higher than its neighbors. Kanawha county is home to the state's capital, Charleston, and I speculate that Putnam is home to some more hoity toity suburbs for top government workers and/or higher quality schools.
 
 There was a very large surge in home values in the central part of the state, with Calhoun, Gilmer, and Braxton Counties all rising over 10% in the year. This may be because these homes were already much more inexpensive on average, having more space to grow, and a rising appeal of rural living.
 
-This visualization will be more useful when I other metrics, such as employment, industry, and education data, are incorperated. Look out for the next version.
+This visualization will be more useful when I other metrics, such as employment, industry, and education data, are incorporated. Look out for the next version.
 
 
 ## About
