@@ -1,0 +1,150 @@
+
+
+{% if pcard_style != true %}
+<style>
+    .project-card {
+        padding: 5px;
+        margin-left: 5px;
+        margin-bottom: 64px;
+        margin-top: 64px;
+    }
+    .pcard-title-area h4 {
+        display:inline-block;
+        margin-bottom: 5px;
+        width: 260px;
+    }
+    .pcard-title-area span {
+        display:inline-block;
+        padding-left:10px;
+        padding-right:10px;
+        font-size: 11px;
+    }
+    .languages span {
+        font-size: 12px;
+        font-family: sans-serif;
+        display: inline-block;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: rgb(232, 240, 231);
+        background-color: #24242c;
+    }
+    .pcard-times {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+    .pcard-times h7 {
+        display: inline-block;
+        margin-left: 5px;
+    }
+    .pcard-completed {
+        color: rgb(28, 156, 28);
+    }
+    .pcard-hiatus {
+        color: rgb(207, 190, 39);
+    }
+    .pcard-dead {
+        color: gray;
+    }
+    .pcard-ongoing {
+        color: rgb(92, 92, 236);
+    }
+    .pcard-dates {
+        padding-left: 10px;
+    }
+    .pcard-commits {
+        padding-left: 12px;
+    }
+    .pcard-content {
+        border-left: 1px dotted whitesmoke;
+        margin-top: 10px;
+        padding-left: 15px;
+    }
+    .pcard-title-targ {
+        cursor:pointer;
+    }
+    .pcard-title-targ:hover {
+        cursor:pointer;
+        color: white;
+    }
+    .pcard-title-targ:active {
+        cursor:pointer;
+        color: rgb(198, 218, 204);
+    }
+    .pcard-more-button {
+        margin-left: 15px;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .pcard-more-button:hover {
+        color: white;
+    }
+    .pcard-more-button:active {
+        color: rgb(198, 218, 204);
+    }
+</style>
+{% assign pcard_style = true %}
+{% endif %}
+
+<div class="project-card">
+    <div class="pcard-title-area">
+        <h4 class="pcard-title-targ" id="{{include.data.name}}-click-targ">{{include.data.name}}</h4>
+        {% if include.data.github %}
+        <span><a href="{{include.data.github}}">Github</a></span>
+        {% endif %}
+        {% if include.data.link %}
+        <span><a href="{{include.data.link}}">Website</a></span>
+        {% endif %}
+        
+    </div>
+    <dfn>{{include.data.brief}}</dfn>
+    <div class="languages">
+        {% assign ls = include.data.technologies | split: " " %}
+        {% for l in ls %}
+            <span>{{l}}</span>
+        {% endfor %}
+    </div>
+    <div class="pcard-times">
+        {% if include.data.completed %}
+        <h7>
+            <h8 
+            {% if include.data.completed == "complete" %} 
+            class = "pcard-completed"
+            {% elsif include.data.completed == "hiatus" %}
+            class = "pcard-hiatus"
+            {% elsif include.data.completed == "ongoing" %}
+            class = "pcard-ongoing"
+            {% elsif include.data.completed == "dead" %}
+            class = "pcard-dead"
+            {% endif %}
+            >{{include.data.completed}}</h8>
+        </h7>
+        {% endif %}
+        <h7 class="pcard-commits">{{include.data.commits}} commits</h7>
+        <h8 class="pcard-more-button" id="{{include.data.name}}-more-button">more...</h8>
+    </div>
+    <div class="pcard-content" id="{{include.data.name}}-foldable-content">
+        {{include.data.content}}
+    </div>
+</div>
+
+<script>
+    {
+        let content = document.getElementById("{{include.data.name}}-foldable-content")
+        let title = document.getElementById("{{include.data.name}}-click-targ")
+        let more = document.getElementById("{{include.data.name}}-more-button")
+        function click() {
+            if(content.style.display == "none") {
+                content.style.display = "block"
+                more.textContent = "...less"
+            } else {
+                content.style.display = "none "
+                more.textContent = "more..."
+            }
+        }
+        title.addEventListener("click", click)
+        more.addEventListener("click", click)
+        click()
+
+    }
+
+</script>
