@@ -1,7 +1,7 @@
 ---
 name: comment-anywhere
 brief: Add comments to any webpage on the internet.
-technologies: go typescript postgres docker sqlc vite
+technologies: go typescript postgres docker sqlc vite browser-extension
 year: 2023
 updated: 2023-02-24
 started: 2022-09-01
@@ -11,7 +11,7 @@ github: https://github.com/comment-anything/
 layout: project
 category: personal
 output: true
-completed: ongoing
+completed: complete
 ---
 
 This is my senior project. Over the last decade, many sites have closed their comments sections, causing comments to scatter among the disparate social media locations where those sites are shared. It has become harder to find comments - and the useful information therein - for a particular site or story. I believe there is a market need for comment sections permanently attached to webpages, which follow the content wherever it is shared, so I proposed this project, Comment Anywhere. 
