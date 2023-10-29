@@ -159,7 +159,7 @@ table td { border: 1px solid #e8e8e8; }
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
 
-.highlighter-rouge .highlight { background: #eef; }
+.highlighter-rouge .highlight { background: rgb(18, 18, 27); }
 
 .highlight .c { color: #998; font-style: italic; }
 
